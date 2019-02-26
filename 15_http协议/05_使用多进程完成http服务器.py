@@ -70,7 +70,7 @@ def main():
         # 创建线程
         p = multiprocessing.Process(target=server_client, args=(new_socket,))
         p.start()
-
+        # 用mulltiprocessing创建进程时，子进程复制主进程资源
         new_socket.close()        
     
         # 5. 为这个客户端服务

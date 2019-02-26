@@ -19,10 +19,12 @@ def main():
         recv_data = udp_socket.recvfrom(1024)     
 
         # 打印数据 recv_data 为元组(接受到的数据，(发送方的ip,端口号)
-        recv_message = rect_dat[0]  # 存储f接受到的数据
-        send_addr = recv_data[1]  # 存储发送方的地址信息
-        print("%s,%s" % (recv_data.decode("gbk"), str(send_addr)))
+        recv_message = recv_data[0]  # 存储f接受到的数据
+        recv_addr = recv_data[1]  # 存储发送方的地址信息
 
+        #print("%s,%s" % (recv_data.decode("gbk"), str(send_addr)))
+
+        print("%s,%s" % (recv_message.decode("utf-8"), str(recv_addr)))
     udp_socket.close()
 
 
