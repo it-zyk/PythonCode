@@ -50,7 +50,7 @@ class WSGIServer(object):
         # 2.1 如果请求的资源不是以.py结尾，那么就认为是静态资源（html/css/js/png，jpg等）
         if not file_name.endswith(".py"):
             try:
-                f = open(self.static_path + file_name, "rb", encoding="utf-8")
+                f = open(self.static_path + file_name, "rb")
             except:
                 response = "HTTP/1.1 404 NOT FOUND\r\n"
                 response += "\r\n"
@@ -141,7 +141,7 @@ def main():
         print("python3 xxxx.py 7890 mini_frame:application")
         return
 
-    with open("./web_server.conf",encoding="utf-8") as f:
+    with open("./web_server.conf") as f:
         conf_info = eval(f.read())
 
     # 此时 conf_info是一个字典里面的数据为：
