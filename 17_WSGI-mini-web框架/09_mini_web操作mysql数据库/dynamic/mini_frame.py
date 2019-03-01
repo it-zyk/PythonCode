@@ -1,4 +1,7 @@
 import re
+import time
+import os
+import pymysql
 
 URL_FUNC_DICT = dict()
 
@@ -17,10 +20,38 @@ def index():
     with open("./templates/index.html") as f:
         content = f.read()
 
-    my_stock_info = "哈哈哈哈 这是你的本月名称....."
+    # my_stock_info = "哈哈哈哈 这是你的本月名称....."
 
-    content = re.sub(r"\{%content%\}", my_stock_info, content)
+    # content = re.sub(r"\{%content%\}", my_stock_info, content)
+    db = pymysql.connect(host='localhost',port=3306,user='root',password='root',database='stock_db',charset='utf8')
+    cursor = db.cursor()
+    sql = """select * from info;"""
+    cursor.execute(sql)
+    stock_infos = cursor.fetchall()
+    cursor.close()
+    db.close()
 
+
+    tr_tempt= """
+    <tr>
+    <td>%s</td>
+    <td>%s</td>
+    <td>%s</td>
+    <td>%s</td>
+    <td>%s</td>
+    <td>%s</td>
+    <td>%s</td>
+    <td>%s</td>
+    <td>
+        <input type="button" value="添加" id="toAdd" systemidvalue="00007">
+    </td>
+    </tr>
+    """
+    html = ""
+
+    for line_info in stock_infos:
+        html += tr_tempt % (line_info[0], line_info[1], line_info[2], line_info[3], line_info[4], line_info[5], line_info[6], line_info[7] )
+    content = re.sub(r"\{%content%\}", html, content)
     return content
      
 @route("/center.html") 
@@ -28,10 +59,35 @@ def center():
     with open("./templates/center.html") as f:
         content = f.read()
 
-    my_stock_info = "这里是从mysql查询出来的数据。。。"
 
-    content = re.sub(r"\{%content%\}", my_stock_info, content)
+    db = pymysql.connect(host='localhost',port=3306,user='root',password='root',database='stock_db',charset='utf8')
+    cursor = db.cursor()
+    sql = """select a.code,a.short,a.chg,a.turnover,a.price,a.highs, b.note_info from info as a inner join focus as b on a.id = b.id; """
+    cursor.execute(sql)
+    stock_infos = cursor.fetchall()
+    cursor.close()
+    db.close()
 
+
+    tr_tempt= """
+    <tr>
+        <td>%s</td>
+        <td>%s</td>
+        <td>%s</td>
+        <td>%s</td>
+        <td>%s</td>
+        <td>%s</td>
+        <td>%s</td>
+    <td>
+        <input type="button" value="删除" id="toDel" systemidvalue="00007">
+    </td>
+    </tr>
+    """
+    html = ""
+
+    for line_info in stock_infos:
+        html += tr_tempt % (line_info[0], line_info[1], line_info[2], line_info[3], line_info[4], line_info[5], line_info[6])
+    content = re.sub(r"\{%content%\}", html, content)
     return content
      
  #
