@@ -133,13 +133,49 @@ def add_focus(ret):
         return "已经关注了，请勿重复关注..."
 
     # 4. 添加关注
-    sql ="""insert into focus (info_id) select id from info where code=%s; """
+    sql = """insert into focus (info_id) select id from info where code=%s; """
     cursor.execute(sql, (stock_code,))
     db.commit()
     cursor.close()
     db.close()
-    return "add %s OK "  % str(stock_code)
+    return "add %s OK " % str(stock_code)
 
+
+@route(r"/del/(\d+)\.html")
+def del_focus(ret):
+    # 1.获取股票代码
+    # 2. 判断试下是否有这个股票代码，防止恶意添加
+    # 3. 判断以下是否已经关注过
+    stock_code = ret.group(1)
+
+    db = pymysql.connect(host='localhost', port=3306, user='root',
+                         password='root', database='stock_db', charset='utf8')
+    cursor = db.cursor()
+    sql = """select * from info where code=%s; """
+    cursor.execute(sql, (stock_code,))
+    # 如果要是没有这个股票代码，那么认为是非法的请求
+    if not cursor.fetchone():
+        cursor.close()
+        db.close()
+        return "没有这只股票"
+
+    cursor.execute(sql, (stock_code,))
+    sql = """select * from info as i  inner join focus as f on i.id=f.info_id where i.code=%s; """
+    cursor.execute(sql, (stock_code,))
+
+    # 判断是否关注过
+    if not cursor.fetchone():
+        cursor.close()
+        db.close()
+        return "%s 之前未关注，请勿取消关注..." % stock_code
+
+    # 4. 取消关注
+    sql = """delete from focus where info_id = (select id from info where code=%s; """
+    cursor.execute(sql, (stock_code,))
+    db.commit()
+    cursor.close()
+    db.close()
+    return "取消关注成功"
 
 
 def application(env, start_response):
