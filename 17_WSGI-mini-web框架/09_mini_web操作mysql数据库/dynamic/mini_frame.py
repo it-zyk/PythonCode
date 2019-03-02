@@ -85,7 +85,7 @@ def center(ret):
             <a type="button" class="btn btn-default btn-xs" href="/update/%s.html"> <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 修改 </a>
         </td>
         <td>
-            <input type="button" value="删除" id="toDel" name="toDel" systemIdValue="300268">
+            <input type="button" value="删除" id="toDel" name="toDel" systemIdValue=%s>
         </td>
     </tr>
     """
