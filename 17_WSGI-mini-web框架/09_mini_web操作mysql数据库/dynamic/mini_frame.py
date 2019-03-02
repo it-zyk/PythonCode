@@ -119,7 +119,7 @@ def add_focus(ret):
     if not cursor.fetchone():
         cursor.close()
         db.close()
-        retun "已经关注了，请勿重复关注..."
+        return "已经关注了，请勿重复关注..."
     # 4. 添加关注
     sql ="""insert into focus (info_id) select id from info where code = %s """
     cursor.execute(sql, stock_code)
