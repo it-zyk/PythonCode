@@ -3,6 +3,7 @@ import time
 import os
 import pymysql
 import urllib.parse
+import logging
 
 
 URL_FUNC_DICT = dict()
@@ -233,6 +234,13 @@ def application(env, start_response):
     # file_name = "/index.py"
 
     # return URL_FUNC_DICT[file_name]()
+
+    logging.basicConfig(level=logging.INFO,
+                        filename='./log.txt',
+                        filemode='a',
+                        format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
+
+    logging.info("访问的是，%s" % file_name)
     try:
         for url, func in URL_FUNC_DICT.items():
             ret = re.match(url, file_name)
@@ -242,4 +250,5 @@ def application(env, start_response):
         # func = URL_FUNC_DICT[file_name]
         # return func()
     except Exception as ret:
+        logging.warning("产生了异常: 异常信息：%s" % str(ret))
         return "产生了异常 %s" % str(ret)
