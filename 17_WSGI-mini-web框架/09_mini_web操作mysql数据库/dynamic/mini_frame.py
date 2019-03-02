@@ -250,5 +250,5 @@ def application(env, start_response):
         # func = URL_FUNC_DICT[file_name]
         # return func()
     except Exception as ret:
-        logging.warning("产生了异常: 异常信息：%s" % str(ret))
+        logging.warning(str(ret))
         return "产生了异常 %s" % str(ret)
