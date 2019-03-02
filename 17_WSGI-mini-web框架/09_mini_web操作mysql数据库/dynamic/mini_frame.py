@@ -2,6 +2,8 @@ import re
 import time
 import os
 import pymysql
+import urllib.parse
+
 
 URL_FUNC_DICT = dict()
 
@@ -209,8 +211,9 @@ def show_update_page(ret):
 def save_update_page(ret):
     """"保存修改的信息"""
     stock_code = ret.group(1)
-    comment = ret.group(2)
-
+    # comment = ret.group(2)
+    # URL 解码
+    comment = urllib.parse.unquote(comment)
     db = pymysql.connect(host='localhost', port=3306, user='root',
                          password='mysql', database='stock_db', charset='utf8')
     cs = conn.cursor()
