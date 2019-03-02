@@ -81,16 +81,19 @@ def center(ret):
         <td>%s</td>
         <td>%s</td>
         <td>%s</td>
-    <td>
-        <input type="button" value="删除" id="toDel" name="toDel" systemIdValue="00007">
-    </td>
+        <td>
+            <a type="button" class="btn btn-default btn-xs" href="/update/%s.html"> <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 修改 </a>
+        </td>
+        <td>
+            <input type="button" value="删除" id="toDel" name="toDel" systemIdValue="300268">
+        </td>
     </tr>
     """
     html = ""
 
     for line_info in stock_infos:
         html += tr_tempt % (line_info[0], line_info[1], line_info[2],
-                            line_info[3], line_info[4], line_info[5], line_info[6])
+                            line_info[3], line_info[4], line_info[5], line_info[6], line_info[0], line_info[0])
     content = re.sub(r"\{%content%\}", html, content)
     return content
 
@@ -118,7 +121,7 @@ def add_focus(ret):
         cursor.close()
         db.close()
         return "没有这只股票"
-    
+
     cursor.execute(sql, (stock_code,))
     sql = """select * from info as i  inner join focus as f on i.id=f.info_id where i.code=%s; """
     cursor.execute(sql, (stock_code,))
@@ -128,7 +131,7 @@ def add_focus(ret):
         cursor.close()
         db.close()
         return "已经关注了，请勿重复关注..."
-    
+
     # 4. 添加关注
     sql ="""insert into focus (info_id) select id from info where code=%s; """
     cursor.execute(sql, (stock_code,))
@@ -136,7 +139,7 @@ def add_focus(ret):
     cursor.close()
     db.close()
     return "add %s OK "  % str(stock_code)
-     
+
 
 
 def application(env, start_response):
