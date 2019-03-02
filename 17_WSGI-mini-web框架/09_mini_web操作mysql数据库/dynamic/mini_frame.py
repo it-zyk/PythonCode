@@ -66,7 +66,7 @@ def center(ret):
     db = pymysql.connect(host='localhost', port=3306, user='root',
                          password='root', database='stock_db', charset='utf8')
     cursor = db.cursor()
-    sql = """select a.code,a.short,a.chg,a.turnover,a.price,a.highs, b.note_info from info as a inner join focus as b on a.id = b.id; """
+    sql = """select a.code,a.short,a.chg,a.turnover,a.price,a.highs, b.note_info from info as a inner join focus as b on a.id = b.info_id; """
     cursor.execute(sql)
     stock_infos = cursor.fetchall()
     cursor.close()
@@ -112,16 +112,26 @@ def add_focus(ret):
     db = pymysql.connect(host='localhost', port=3306, user='root',
                          password='root', database='stock_db', charset='utf8')
     cursor = db.cursor()
-    sql = """select * from info as i  inner join focus as f on i.id=f.info_id where i.code=%s; """
+    sql = """select * from info where code=%s; """
     cursor.execute(sql, (stock_code,))
-    # 如果要是没有这个股票代码，那么认为是非法的请求
     if not cursor.fetchone():
         cursor.close()
         db.close()
+        return "没有这只股票"
+    
+    cursor.execute(sql, (stock_code,))
+    sql = """select * from info as i  inner join focus as f on i.id=f.info_id where i.code=%s; """
+    cursor.execute(sql, (stock_code,))
+
+    # 如果要是没有这个股票代码，那么认为是非法的请求
+    if cursor.fetchone():
+        cursor.close()
+        db.close()
         return "已经关注了，请勿重复关注..."
+    
     # 4. 添加关注
     sql ="""insert into focus (info_id) select id from info where code=%s; """
-    cursor.execute(sql, stock_code)
+    cursor.execute(sql, (stock_code,))
     db.commit()
     cursor.close()
     db.close()
