@@ -170,7 +170,7 @@ def del_focus(ret):
         return "%s 之前未关注，请勿取消关注..." % stock_code
 
     # 4. 取消关注
-    sql = """delete from focus where info_id = (select id from info where code=%s; """
+    sql = """delete from focus where info_id = (select id from info where code=%s); """
     cursor.execute(sql, (stock_code,))
     db.commit()
     cursor.close()
