@@ -246,9 +246,11 @@ def application(env, start_response):
             ret = re.match(url, file_name)
             if ret:
                 return func(ret)
+            else:
+                 logging.warning("没有对应的函数....")
+                 return "请求的url(%s)没有对应的函数...." % file_name
 
         # func = URL_FUNC_DICT[file_name]
         # return func()
     except Exception as ret:
-        logging.warning(str(ret))
         return "产生了异常 %s" % str(ret)
