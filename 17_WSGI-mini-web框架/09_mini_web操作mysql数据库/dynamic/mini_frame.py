@@ -16,7 +16,7 @@ def route(url):
 
 
 @route("/index.html")
-def index():
+def index(ret):
     with open("./templates/index.html") as f:
         content = f.read()
 
@@ -43,19 +43,19 @@ def index():
     <td>%s</td>
     <td>%s</td>
     <td>
-        <input type="button" value="添加" id="toAdd" systemidvalue="00007">
+        <input type="button" value="添加" id="toAdd" name="toAdd" systemIdValue="%s">
     </td>
     </tr>
     """
     html = ""
 
     for line_info in stock_infos:
-        html += tr_tempt % (line_info[0], line_info[1], line_info[2], line_info[3], line_info[4], line_info[5], line_info[6], line_info[7] )
+        html += tr_tempt % (line_info[0], line_info[1], line_info[2], line_info[3], line_info[4], line_info[5], line_info[6], line_info[7], line_info[1])
     content = re.sub(r"\{%content%\}", html, content)
     return content
      
 @route("/center.html") 
-def center():
+def center(ret):
     with open("./templates/center.html") as f:
         content = f.read()
 
@@ -79,7 +79,7 @@ def center():
         <td>%s</td>
         <td>%s</td>
     <td>
-        <input type="button" value="删除" id="toDel" systemidvalue="00007">
+        <input type="button" value="删除" id="toDel" name="toDel" systemIdValue="00007">
     </td>
     </tr>
     """
@@ -97,6 +97,11 @@ def center():
  #        }
  #
 
+@route("/add/\d+\.html")
+def add_focus(ret):
+    stock_code = ret.group(1)
+    return "add focus %s" % str(stock_code)
+
 
 def application(env, start_response):
     start_response('200 OK', [('Content-Type', 'text/html;charset=utf-8')])
@@ -106,8 +111,13 @@ def application(env, start_response):
 
     # return URL_FUNC_DICT[file_name]()
     try:
-        func = URL_FUNC_DICT[file_name]
-        return func()
+        for url, func in URL_FUNC_DICT.items():
+            ret = re.match(url, file_name)
+            if ret:
+                return func(ret)
+        
+        # func = URL_FUNC_DICT[file_name]
+        # return func()
     except Exception as ret:
         return "产生了异常 %s" % str(ret)
     
