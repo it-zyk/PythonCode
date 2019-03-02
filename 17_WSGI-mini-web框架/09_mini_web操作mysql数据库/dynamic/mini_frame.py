@@ -97,7 +97,7 @@ def center(ret):
  #
  # URL_FUNC_DICT = {
  #        "/index.py": index,
- #        "/center.py": center
+ #       "/center.py": center
  #        }
  #
 
@@ -107,13 +107,12 @@ def add_focus(ret):
     # 1.获取股票代码
     # 2. 判断试下是否有这个股票代码，防止恶意添加
     # 3. 判断以下是否已经关注过
-
     stock_code = ret.group(1)
 
     db = pymysql.connect(host='localhost', port=3306, user='root',
                          password='root', database='stock_db', charset='utf8')
     cursor = db.cursor()
-    sql = """selct * from info as i  inner join focus as f on i.id=f.info_id where i.code = %s; """
+    sql = """select * from info as i  inner join focus as f on i.id=f.info_id where i.code=%s; """
     cursor.execute(sql, (stock_code,))
     # 如果要是没有这个股票代码，那么认为是非法的请求
     if not cursor.fetchone():
@@ -121,12 +120,13 @@ def add_focus(ret):
         db.close()
         return "已经关注了，请勿重复关注..."
     # 4. 添加关注
-    sql ="""insert into focus (info_id) select id from info where code = %s """
+    sql ="""insert into focus (info_id) select id from info where code=%s; """
     cursor.execute(sql, stock_code)
     db.commit()
     cursor.close()
     db.close()
     return "add %s OK "  % str(stock_code)
+     
 
 
 def application(env, start_response):
