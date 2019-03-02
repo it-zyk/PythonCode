@@ -192,7 +192,7 @@ def show_update_page(ret):
 
     # 3. 根据股票代码查询相关的备注信息
     db = pymysql.connect(host='localhost', port=3306, user='root',
-                         password='mysql', database='stock_db', charset='utf8')
+                         password='root', database='stock_db', charset='utf8')
     cs = conn.cursor()
     sql = """select f.note_info from focus as f inner join info as i on i.id=f.info_id where i.code=%s;"""
     cs.execute(sql, (stock_code,))
@@ -215,7 +215,7 @@ def save_update_page(ret):
     # URL 解码
     comment = urllib.parse.unquote(comment)
     db = pymysql.connect(host='localhost', port=3306, user='root',
-                         password='mysql', database='stock_db', charset='utf8')
+                         password='root', database='stock_db', charset='utf8')
     cs = conn.cursor()
     sql = """update focus set note_info=%s where info_id = (select id from info where code=%s);"""
     cs.execute(sql, (comment, stock_code))
