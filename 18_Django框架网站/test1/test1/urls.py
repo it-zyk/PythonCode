@@ -18,4 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^', include('booktest.urls')),  #建立/index 和视图index之间的关系 
 ]
