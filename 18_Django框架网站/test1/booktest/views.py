@@ -32,7 +32,7 @@ def show_books(request):
     # 1. 通过M查图片表的数据
     books = BookInfo.objects.all()
 
-    return render(request, 'booktest/show_books.html', {'book': books})
+    return render(request, 'booktest/show_books.html', {'books': books})
 
 
 def detail(request, bid):
