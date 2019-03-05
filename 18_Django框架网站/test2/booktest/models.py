@@ -30,6 +30,8 @@ class HeroInfo(models.Model):
     # 关系属性 建立图书类和英雄人物类之间的   一对多关系
     hbook = models.ForeignKey('BookInfo')
 
+    # 软删除
+    is_delete = models.BooleanField(default=False)
 
     def __str__(self):
         """返回英雄的名字"""
