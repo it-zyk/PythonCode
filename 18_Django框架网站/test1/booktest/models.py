@@ -27,4 +27,4 @@ class HeroInfo(models.Model):
 
     def __str__(self):
         """返回英雄的名字"""
-        return self.hnmae 
+        return self.hname 
