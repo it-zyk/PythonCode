@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from booktest.models import BookInfo
 from datetime import date
-from django.http import HttpResponse,HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 
 
@@ -21,4 +21,13 @@ def create(request):
     b.save()
     # 让浏览器再访问首页
     # return HttpResponse('OK')
+    # 重定向
     return HttpResponseRedirect('/index')
+
+
+def delete(request, bid):
+    book = BookInfo.objects.get(id=bid)
+    # book.is_delete = True
+    # book.save()
+    book.delete()
+    return redirect('/index')
