@@ -18,7 +18,7 @@ class BookInfoManager(models.Manager):
         return books
 
     def create_book(self, btitle, bpub_date):
-        ''''# 模型类： 操作模型类对应的数据表（增删改查）''''
+        '''# 模型类： 操作模型类对应的数据表（增删改查）'''
         # 获取self 中的模型类
         models_class = self.models
         book = models_class
@@ -60,6 +60,7 @@ class BookInfo(models.Model):
 
     def __str__(self):
         return self.btitle
+
     class Meta:
         db_table = booktest_bookinfo
 
