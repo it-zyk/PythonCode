@@ -86,7 +86,7 @@ class EmployeeDetailInfo(models.Model):
 
 
 class AreaInfo(models.Model):
-    ''地区模型类'''
+    '''地区模型类'''
     atitle = models.CharField(max_length=30)
     # 关系属性，代表当前地区的父级地区
     aParent = models.ForeignKey('self', null=True, blank='True')
