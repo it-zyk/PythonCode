@@ -83,3 +83,10 @@ class EmployeeDetailInfo(models.Model):
     addr = models.CharField(max_length=256)
     # 关系属性，代表员工基本信息
     employee_basic = models.OneToOneField('EmployeeBasicInfo')
+
+
+class AreaInfo(models.Model):
+    ''地区模型类'''
+    atitle = models.CharField(max_length=30)
+    # 关系属性，代表当前地区的父级地区
+    aParent = models.ForeignKey('self', null=True, blank='True')
