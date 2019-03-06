@@ -62,7 +62,7 @@ class BookInfo(models.Model):
         return self.btitle
 
     class Meta:
-        db_table = booktest_bookinfo
+        db_table = 'booktest_bookinfo'
 
 # 多类
 
