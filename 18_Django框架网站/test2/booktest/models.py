@@ -3,6 +3,8 @@ from django.db import models
 # Create your models here.
 
 # 1 类
+
+
 class BookInfo(models.Model):
     """图书模型类"""
     # max_length 指定字符串的长度
@@ -20,9 +22,11 @@ class BookInfo(models.Model):
         return self.btitle
 
 # 多类
+
+
 class HeroInfo(models.Model):
     """英雄人物模型类"""
-    hname = models.CharField(max_length=20)   #英雄名称
+    hname = models.CharField(max_length=20)  # 英雄名称
     # Fase 默认值 代表男性
     hgender = models.BooleanField(default=False)
     # 备注
@@ -36,3 +40,46 @@ class HeroInfo(models.Model):
     def __str__(self):
         """返回英雄的名字"""
         return self.hname
+
+
+# 新闻类型
+
+class NewsType(models.Model):
+    # 类型名
+    type_name = models.CharField(max_length=20)
+
+    # 关系属性 代表类型下的信息
+    type_news = models.ManyToManyField('NewsInfo')
+
+
+class NewsInfo(models.Model):
+    # 新闻标题
+    title = models.CharField(max_length=128)
+    # 发布类型
+    pub_date = models.DateTimeField(auto_now_add=True)
+
+    # 信息内容
+    content = models.TextField()
+
+    # 关联关系
+    new_type = models.ManyToManyField('NewsType')
+
+
+class EmployeeBasicInfo(models.Model):
+    # 姓名
+    name = models.CharField(max_length=20)
+
+    # 性别
+    gender = models.BooleanField(default=False)
+
+    # 年龄
+    age = models.IntegerField()
+
+    employee_data = models.OneToOneField('EmployeeDetailInfo')
+
+
+class EmployeeDetailInfo(models.Model):
+    # 联系地址
+    addr = models.CharField(max_length=256)
+    # 关系属性，代表员工基本信息
+    employee_basic = models.OneToOneField('EmployeeBasicInfo')
