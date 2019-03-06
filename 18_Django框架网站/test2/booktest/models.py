@@ -5,6 +5,33 @@ from django.db import models
 # 1 类
 
 
+class BookInfoManager(models.Manager):
+    '''图书模型管理类'''
+    # 1. 改变查询结果集
+
+    def all(self):
+        '''改变查询结果集'''
+        # 1 调用父类的all 获取所有数据
+        books = super().all()
+        # 2. 对数据进行过滤
+        books = books.filter(is_delete=False)
+        return books
+
+    def create_book(self, btitle, bpub_date):
+        ''''# 模型类： 操作模型类对应的数据表（增删改查）''''
+        # 获取self 中的模型类
+        models_class = self.models
+        book = models_class
+        # 创建一个图书对象
+        # book = BookInfo()
+        book.btitle = btitle
+        book.bpub_date = bpub_date
+        # 2. 保存进数据库
+        book.save()
+        # 3 返回book
+        return book
+
+
 class BookInfo(models.Model):
     """图书模型类"""
     # max_length 指定字符串的长度
@@ -18,8 +45,23 @@ class BookInfo(models.Model):
     # 软删除
     is_delete = models.BooleanField(default=False)
 
+    # book = models.Manager()
+    objects = BookInfoManager()
+
+    # @classmethod
+    # def create_book(cls, btitle, bpub_date):
+    #     # 创建图书类对象
+    #     obj = cls()
+    #     obj.btitle = btitle
+    #     obj.bpub_date = bpub_date
+    #     # 2.保存进数据库
+    #     obj.save()
+    #     return obj
+
     def __str__(self):
         return self.btitle
+    class Meta:
+        db_table = booktest_bookinfo
 
 # 多类
 
@@ -36,6 +78,8 @@ class HeroInfo(models.Model):
 
     # 软删除
     is_delete = models.BooleanField(default=False)
+
+    # book = models.Manager() # 自定义
 
     def __str__(self):
         """返回英雄的名字"""
