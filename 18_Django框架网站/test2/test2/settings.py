@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'booktest',  #注册应用
+    'booktest',  # 注册应用
 )
 
 MIDDLEWARE_CLASSES = (
@@ -80,11 +80,11 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME': 'bj18', # 使用数据库的名字，数据库必须手动创建
-        'USER': 'root', # 链接mysql的用户名
-        'PASSWORD': 'root', # 链接mysql密码
-        'HOST': 'localhost',  #指定mysql 数据库所在电脑IP
-        'PORT': 3306, # 数据库所在电脑ip
+        'NAME': 'bj18',  # 使用数据库的名字，数据库必须手动创建
+        'USER': 'root',  # 链接mysql的用户名
+        'PASSWORD': 'root',  # 链接mysql密码
+        'HOST': 'localhost',  # 指定mysql 数据库所在电脑IP
+        'PORT': 3306,  # 数据库所在电脑ip
     }
 }
 
