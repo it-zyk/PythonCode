@@ -8,6 +8,9 @@ urlpatterns = [
     url(r'^index$', views.index),
     # 捕获位置参数
     # url(r'^showarg(\d+)$', views.show_arg)
-    # 捕获关键字参数
+    # 捕获关键字参数http://localhost:8000/showarg22
     url(r'^showarg(?P<num>\d+)$', views.show_arg),
+    url(r'^showarg(?P<num>\d+)$', views.show_arg),
+    # 显示登录页面
+    url(r'^login$', views.login),
 ]
