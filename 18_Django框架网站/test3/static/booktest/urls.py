@@ -13,4 +13,8 @@ urlpatterns = [
     url(r'^showarg(?P<num>\d+)$', views.show_arg),
     # 显示登录页面
     url(r'^login$', views.login),
+    # 用户校验
+    url(r'^login_check$', views.login_check),
+    url(r'test_ajax$', views.ajax_test)
+    url(r'ajax_handle$', views.ajax_handle)
 ]
