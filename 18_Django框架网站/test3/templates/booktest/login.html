@@ -12,8 +12,9 @@
   <!-- POST: 提交的参数请求 --数据安全性高
   Get： 提交参数在url中  -->
   <form method='post' action="/login_check">
-    用户名： <input type="text" name="username"><br />
+    用户名： <input type="text" name="username" value="{{ username }}"><br />
     密码 ： <input type="password" name="password"><br />
+    <input type="checkbox" name="remember">记住用户名
     <input type="submit" value="登录">
   </form>
 </body>
