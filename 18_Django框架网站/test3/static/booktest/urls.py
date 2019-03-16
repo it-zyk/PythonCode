@@ -19,4 +19,8 @@ urlpatterns = [
     url(r'^ajax_handle$', views.ajax_handle)
     url(r'^set_cookie$', views.set_cookie)
     url(r'^get_cookie$', views.get_cookie)
+
+    url(r'^set_session$', views.set_session),  # 设置session
+    url(r'^get_session$', views.get_session),  # 获取session
+    url(r'^clear_session$', views.clear_session),  # 清除session
 ]
