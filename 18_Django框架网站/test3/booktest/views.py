@@ -24,7 +24,7 @@ def login(request):
     else:
         username = ''
 
-    return render(request, 'booktest/login.html', username=username)
+    return render(request, 'booktest/login.html', {"username": username})
 
 # 返回 QueryDict
 
@@ -64,7 +64,7 @@ def ajax_test(request):
 def ajax_handle(request):
     '''ajax处理请求'''
     # 返回json数据
-    retun JsonResponse({'res': 1})
+    return JsonResponse({'res': 1})
 
 
 def set_cookie(request):
@@ -74,13 +74,13 @@ def set_cookie(request):
     # response.set_cookie('num', 1, max_age=14*24 *3600)
     # 设置cookies 由有效时间
     response.set_cookie('num', 1, expires=datetime.now() + timedelta(days=14))
-    retun response
+    return response
 
 
 def get_cookie(request):
     '''获取cookies'''
     num = request.COOKIES('num')
-    retun HttpResponse(num)
+    return HttpResponse(num)
 
 
 # /set_session
@@ -97,7 +97,7 @@ def get_session(request):
     '''获取session'''
     username = request.session['username']
     age = request.session['age']
-    return HttpResponse(username+':'+str(age))
+    return HttpResponse(username + ':' + str(age))
 
 
 #　/clear_session
