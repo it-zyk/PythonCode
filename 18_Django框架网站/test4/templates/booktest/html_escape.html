@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>html转义</title>
+</head>
+
+<body>
+  <h1>html转义：</h1>
+  {{ content|safe }}
+  <h1>使用safe过滤器关闭转义</h1>
+  <h1>使用autoescape 关闭转义</h1>
+  {%autoescape off %}
+  {{ content }}
+  {% endautoescape %}
+  <h1>模板编码中的字符串默认不会经过转义</h1>
+  {{ test|default:'<h1>Hello World</h1>'}}
+  <h1>手动转义</h1>
+  {{ test|default:'&lt;hl&gt;hello &lt;/hl&gt;'}}
+</body>
+
+</html>

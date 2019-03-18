@@ -3,7 +3,9 @@ from booktest import views
 
 urlpatterns = [
     url(r'^index$', views.index),
-    url(r'^create$', views.create),
-    url(r'^delete/(\d+)$', views.delete),
-    url(r'^area/$', views.area),
+    url(r'^temp_var$', views.temp_var),
+    url(r'^temp_tags$', views.temp_tags),
+    url(r'^temp_filter$', views.temp_filter),
+    url(r'^temp_inherit$', views.temp_inherit),
+    url(r'^html_escape$', views.html_escape),
 ]

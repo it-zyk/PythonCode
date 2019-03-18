@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load filters %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css">
+    .red {
+      background-color: red;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .green {
+      background-color: green
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    {# 模板注释 #}
+     {# comment #}
+     {# endcomment #}
+    {% for book in books %}
+        {% if book.id|mod %}
+          <li class="yellow">{{ book.btitle }}--{{ book.bpub_date }}</li>
+          {% endif %}
+
+          {% if book.id|mod_val:3 %}
+            <li class="red">{{ book.btitle }}--{{ book.bpub_date }}</li>
+            {% endif %}
+
+    {% if book.id <= 2 %} <li class="red">
+      {{ book.btitle | length }} -- {{ book.bpub_date | date:'Y年-m月-d日'  }}</li>
+      {{ book.btitle | length }} -- {{ book.bpub_date | date:'Y年-m月-d日'  }}</li>
+      {% else %}
+      <li class="green">{{ book.btitle }}--{{ book.bpub_date }}</li>
+      {% endif %}
+      {% endfor %}
+  </ul>
+  default 过滤器: <br />
+  {{ content | default:'hello' }}
+</body>
+
+</html>
