@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src='/static/js/jquery-1.12.4.min.js'></script>
+  <script>
+    $(function() {
+      $.get("/prov", function(data) {
+        var prov = $('#prov');
+        res = data.res;
+        $.each(res, function(index, item) {
+          option_str = '<option value="' + item[0] + '">' + item[1] + '</option>';
+          prov.append(option_str);
+        });
+        $('#prov').change(function() {
+          // 获取点击省的id
+          provid = $(this).val()
+          var city = $('#city');
+          //清空 city下拉列表
+          city.empty().append('<option value="">---请选择市---</option>');
+          $.get("/city" + provid, function(data) {
+            $.each(res, function(index, item) {
+              option_str = '<option value="' + item[0] + '">' + item[1] + '</option>';
+              city.append(option_str);
+            })
+          });
+        })
+      })
+    });
+  </script>
+</head>
+
+<body>
+
+  <select name="prov" id="prov">
+    <option value="">请选择省</option>
+  </select>
+  <select name="city" id="city">
+    <option value="">---请选择市---</option>
+  </select>
+  <select name="dis" id="dis">
+    <option value="">---请选择县---</option>
+  </select>
+</body>
+
+</html>
