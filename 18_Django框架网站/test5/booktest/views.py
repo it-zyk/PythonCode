@@ -22,7 +22,7 @@ def blocked_ips(view_func):
 def index(request):
     '''首页'''
     print('----------index---------------')
-    num = 'a' + 1
+    # num = 'a' + 1
     return render(request, 'booktest/index.html')
 
 

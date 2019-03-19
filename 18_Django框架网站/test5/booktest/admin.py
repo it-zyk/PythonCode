@@ -1,5 +1,5 @@
 from django.contrib import admin
-from booktest.models import AreaInfo, PicTest
+from booktest.models import AreaInfo,PicTest
 # Register your models here.
 
 
