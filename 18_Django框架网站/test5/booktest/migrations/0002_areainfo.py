@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('booktest', '0003_auto_20190306_1433'),
+        ('booktest', '0001_initial'),
     ]
 
     operations = [
@@ -15,8 +15,8 @@ class Migration(migrations.Migration):
             name='AreaInfo',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
-                ('atitle', models.CharField(max_length=30)),
-                ('aParent', models.ForeignKey(blank='True', null=True, to='booktest.AreaInfo')),
+                ('atitle', models.CharField(verbose_name='标题', max_length=20)),
+                ('aParent', models.ForeignKey(blank=True, null=True, to='booktest.AreaInfo')),
             ],
         ),
     ]
