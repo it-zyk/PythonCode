@@ -38,7 +38,7 @@
         city_id = $(this).val()
         $.get('/dis' + city_id, function(data) {
           // 获取返回的json数据
-          res = data.data
+          res = data.res
           // 获取dis下拉列表框
           dis = $('#dis')
           // 清空dis下拉列表框
