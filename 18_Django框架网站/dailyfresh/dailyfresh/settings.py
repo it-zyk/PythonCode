@@ -39,11 +39,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tinymce', # 父文本编辑器
+    'tinymce',  # 父文本编辑器
     'user',  # 用户模块
     'goods',  # 商品模块
     'cart',  # 购物车模块
-    'order'，  # 订单模块
+    'order',  # 订单模块
 )
 
 MIDDLEWARE_CLASSES = (
@@ -97,7 +97,7 @@ DATABASES = {
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
 # django认证系统使用的模型类
-AUTH_USER_MODEL='user.User'
+AUTH_USER_MODEL = 'user.User'
 
 LANGUAGE_CODE = 'zh-hans'
 
