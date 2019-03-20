@@ -12,4 +12,6 @@ urlpatterns = [
     url(r'^areas$', views.areas),  # 获取所有省级地区的信息
     url(r'^prov$', views.prov),
     url(r'^city(\d+)$', views.city),
+    url(r'^dis(\d+)$', views.city),
+
 ]
