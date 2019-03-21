@@ -17,6 +17,7 @@ def register_handle(request):
     password = request.POST.get('pwd')
     email = request.POST.get('email')
     allow = request.POST.get('allow')
+    print(username)
     if allow != 'on':
         return render(request, 'user/register.html', {'errmsg': '请同意协议'})
     # 2. 进行数据校验
@@ -38,9 +39,10 @@ def register_handle(request):
     if user:
         return render(request, 'user/register.html', {'errmsg': '用户名已存在'})
 
+    print("----操作数据库---")
     user = User.objects.create_user(username, email, password)
     user.is_active = 0
     user.save()
-
+    print("操作数据库完成")
     # 4，返回应答 跳转首页
     redirect(reverse('goods.index'))
