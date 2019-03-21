@@ -2,15 +2,11 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-from django.conf import settings
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('goods', '0001_initial'),
-        ('user', '0001_initial'),
-        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
@@ -44,23 +40,11 @@ class Migration(migrations.Migration):
                 ('transit_price', models.DecimalField(verbose_name='订单运费', max_digits=10, decimal_places=2)),
                 ('order_status', models.SmallIntegerField(verbose_name='订单状态', default=1, choices=[(1, '待支付'), (2, '待发货'), (3, '待收货'), (4, '待评价'), (5, '已完成')])),
                 ('trade_no', models.CharField(verbose_name='支付编号', max_length=128)),
-                ('addr', models.ForeignKey(verbose_name='地址', to='user.Address')),
-                ('user', models.ForeignKey(verbose_name='用户', to=settings.AUTH_USER_MODEL)),
             ],
             options={
                 'verbose_name': '订单',
                 'verbose_name_plural': '订单',
                 'db_table': 'df_order_info',
             },
-        ),
-        migrations.AddField(
-            model_name='ordergoods',
-            name='order',
-            field=models.ForeignKey(verbose_name='订单', to='order.OrderInfo'),
-        ),
-        migrations.AddField(
-            model_name='ordergoods',
-            name='sku',
-            field=models.ForeignKey(verbose_name='商品SKU', to='goods.GoodsSKU'),
         ),
     ]
