@@ -95,9 +95,9 @@ DATABASES = {
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
- 
+
 # django认证系统使用的模型类
-AUTH_USER_MODEL='user.User'
+AUTH_USER_MODEL = 'user.User'
 
 LANGUAGE_CODE = 'zh-hans'
 
@@ -114,6 +114,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
 
 # 富文本编辑器配置
 TINYMCE_DEFAULT_CONFIG = {
