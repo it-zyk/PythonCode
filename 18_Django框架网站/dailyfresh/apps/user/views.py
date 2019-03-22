@@ -7,6 +7,7 @@ from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from django.conf import settings
 from django.http import HttpResponse
 from django.core.mail import send_mail
+from celery_tasks.tasks import send_register_active_email
 
 # Create your views here.
 
