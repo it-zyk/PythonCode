@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.core.urlresolvers import reverse
 import re
 from user.models import User
+from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from django.conf import settings
@@ -10,6 +11,17 @@ from django.core.mail import send_mail
 from celery_tasks.tasks import send_register_active_email
 
 # Create your views here.
+
+
+class LogoutView(View):
+        '''退出登录'''
+    def get(self, request):
+        '''退出登录'''
+        # 清除用户的session信息
+        logout(request)
+
+        # 跳转到首页
+        return redirect(reverse('goods:index'))
 
 
 class RegisterView(View):
