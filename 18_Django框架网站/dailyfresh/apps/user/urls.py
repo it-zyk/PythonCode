@@ -2,7 +2,7 @@
 
 from django.conf.urls import include, url
 from user import views
-from user.views import RegisterView, LoginView, ActiveView
+from user.views import RegisterView, LoginView, ActiveView, LogoutView
 
 urlpatterns = [
     # url(r'^register$', views.register, name='register'),  # 注册
