@@ -45,8 +45,10 @@ class OrderInfo(BaseModel):
 
 class OrderGoods(BaseModel):
     '''订单商品模型类'''
-    order = models.ForeignKey('OrderInfo', verbose_name='订单')
-    sku = models.ForeignKey('goods.GoodsSKU', verbose_name='商品SKU')
+    order = models.ForeignKey(
+        'OrderInfo', on_delete=models.CASCADE, verbose_name='订单')
+    sku = models.ForeignKey(
+        'goods.GoodsSKU', on_delete=models.CASCADE, verbose_name='商品SKU')
     count = models.IntegerField(default=1, verbose_name='商品数目')
     price = models.DecimalField(
         max_digits=10, decimal_places=2, verbose_name='商品价格')
