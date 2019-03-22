@@ -14,12 +14,11 @@ from celery_tasks.tasks import send_register_active_email
 
 
 class LogoutView(View):
-        '''退出登录'''
+    '''退出登录'''
     def get(self, request):
         '''退出登录'''
         # 清除用户的session信息
         logout(request)
-
         # 跳转到首页
         return redirect(reverse('goods:index'))
 
