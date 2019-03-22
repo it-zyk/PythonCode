@@ -28,7 +28,7 @@ class RegisterView(View):
 
     def get(self, request):
         '''显示注册页面'''
-        return render(request, 'user/register.html')
+        return render(request, 'register.html')
 
     def post(self, request):
         '''进行注册处理'''
@@ -38,14 +38,14 @@ class RegisterView(View):
         email = request.POST.get('email')
         allow = request.POST.get('allow')
         if allow != 'on':
-            return render(request, 'user/register.html', {'errmsg': '请同意协议'})
+            return render(request, 'register.html', {'errmsg': '请同意协议'})
         # 2. 进行数据校验
         if not all([username, password, email]):
             # 数据不完整
-            return render(request, 'user/register.html', {'errmsg': '注册信息不完整'})
+            return render(request, 'register.html', {'errmsg': '注册信息不完整'})
         # 校验邮箱
         if not re.match(r'^[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$', email):
-            return render(request, 'user/register.html', {'errmsg': '邮箱格式不合法'})
+            return render(request, 'register.html', {'errmsg': '邮箱格式不合法'})
 
         # 3. 进行业务处理： 进行用户注册
         # 校验用户名是否重复
@@ -56,7 +56,7 @@ class RegisterView(View):
             user = None
 
         if user:
-            return render(request, 'user/register.html', {'errmsg': '用户名已存在'})
+            return render(request, 'register.html', {'errmsg': '用户名已存在'})
 
         user = User.objects.create_user(username, email, password)
         user.is_active = 0
@@ -82,7 +82,7 @@ class LoginView(View):
     '''登录页面'''
 
     def get(self, request):
-        return render(request, 'user/login.html')
+        return render(request, 'login.html')
 
     def post(self, request):
         '''登录校验'''
@@ -92,7 +92,7 @@ class LoginView(View):
 
         # 校验数据
         if not all([username, password]):
-            return render(request, 'user/login.html', {'errmsg': '数据不完整'})
+            return render(request, 'login.html', {'errmsg': '数据不完整'})
 
         # 业务处理:登录校验
         user = authenticate(username=username, password=password)
@@ -124,10 +124,10 @@ class LoginView(View):
                 return response
             else:
                 # 用户未激活
-                return render(request, 'user/login.html', {'errmsg': '账户未激活'})
+                return render(request, 'login.html', {'errmsg': '账户未激活'})
         else:
             # 用户名或密码错误
-            return render(request, 'user/login.html', {'errmsg': '用户名或密码错误'})
+            return render(request, 'login.html', {'errmsg': '用户名或密码错误'})
 
 
 class ActiveView(View):
@@ -157,7 +157,7 @@ class ActiveView(View):
 # GET POST PUT DELETE OPTION
 def register(request):
     if request.method == 'GET':
-        return render(request, 'user/register.html')
+        return render(request, 'register.html')
     else:
         # 1.接收数据
         username = request.POST.get('user_name')
@@ -165,14 +165,14 @@ def register(request):
         email = request.POST.get('email')
         allow = request.POST.get('allow')
         if allow != 'on':
-            return render(request, 'user/register.html', {'errmsg': '请同意协议'})
+            return render(request, 'register.html', {'errmsg': '请同意协议'})
         # 2. 进行数据校验
         if not all([username, password, email]):
             # 数据不完整
             return render(request, 'user/register.html', {'errmsg': '注册信息不完整'})
         # 校验邮箱
         if not re.match(r'^[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$', email):
-            return render(request, 'user/register.html', {'errmsg': '邮箱格式不合法'})
+            return render(request, 'register.html', {'errmsg': '邮箱格式不合法'})
 
         # 3. 进行业务处理： 进行用户注册
         # 校验用户名是否重复
@@ -183,7 +183,7 @@ def register(request):
             user = None
 
         if user:
-            return render(request, 'user/register.html', {'errmsg': '用户名已存在'})
+            return render(request, 'register.html', {'errmsg': '用户名已存在'})
 
         user = User.objects.create_user(username, email, password)
         user.is_active = 0
@@ -210,14 +210,14 @@ def register_handle(request):
     email = request.POST.get('email')
     allow = request.POST.get('allow')
     if allow != 'on':
-        return render(request, 'user/register.html', {'errmsg': '请同意协议'})
+        return render(request, 'register.html', {'errmsg': '请同意协议'})
     # 2. 进行数据校验
     if not all([username, password, email]):
         # 数据不完整
-        return render(request, 'user/register.html', {'errmsg': '注册信息不完整'})
+        return render(request, 'register.html', {'errmsg': '注册信息不完整'})
     # 校验邮箱
     if not re.match(r'^[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$', email):
-        return render(request, 'user/register.html', {'errmsg': '邮箱格式不合法'})
+        return render(request, 'register.html', {'errmsg': '邮箱格式不合法'})
 
     # 3. 进行业务处理： 进行用户注册
     # 校验用户名是否重复
@@ -228,7 +228,7 @@ def register_handle(request):
         user = None
 
     if user:
-        return render(request, 'user/register.html', {'errmsg': '用户名已存在'})
+        return render(request, 'register.html', {'errmsg': '用户名已存在'})
 
     user = User.objects.create_user(username, email, password)
     user.is_active = 0
