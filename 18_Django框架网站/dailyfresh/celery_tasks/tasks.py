@@ -11,7 +11,7 @@ import time
 # django.setup()
 
 # 创建一个Celery类的实例对象
-app = Celery('celery_tasks.tasks', broker='redis://172.0.0.1:6379/8')
+app = Celery('celery_tasks.tasks', broker='redis://127.0.0.1:6379/8')
 
 
 # 定义任务函数
