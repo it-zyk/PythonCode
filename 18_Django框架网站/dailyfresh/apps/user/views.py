@@ -9,6 +9,7 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from celery_tasks.tasks import send_register_active_email
+from utils.minix import LoginRequiredMixin
 
 # Create your views here.
 
@@ -238,21 +239,21 @@ def register_handle(request):
     return redirect(reverse('goods:index'))
 
 
-class UserInfoView(View):
+class UserInfoView(LoginRequiredMixin, View):
     '''用户中心信息页'''
 
     def get(self, request):
         return render(request, 'user_center_info.html', {'page': 'user'})
 
 
-class UserOrderView(View):
+class UserOrderView(LoginRequiredMixin, View):
     '''用户中心-订单中'''
 
     def get(self, request):
         return render(request, 'user_center_order.html', {'page': 'order'})
 
 
-class AddressView(View):
+class AddressView(LoginRequiredMixin, View):
     '''用户中心--地址'''
 
     def get(self, request):
