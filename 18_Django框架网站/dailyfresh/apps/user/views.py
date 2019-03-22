@@ -15,6 +15,7 @@ from celery_tasks.tasks import send_register_active_email
 
 class LogoutView(View):
     '''退出登录'''
+
     def get(self, request):
         '''退出登录'''
         # 清除用户的session信息
@@ -235,3 +236,24 @@ def register_handle(request):
     user.save()
     # 4，返回应答 跳转首页
     return redirect(reverse('goods:index'))
+
+
+class UserInfoView(View):
+    '''用户中心信息页'''
+
+    def get(self, request):
+        return render(request, 'user_center_info.html', {'page': 'user'})
+
+
+class UserOrderView(View):
+    '''用户中心-订单中'''
+
+    def get(self, request):
+        return render(request, 'user_center_order.html', {'page': 'order'})
+
+
+class AddressView(View):
+    '''用户中心--地址'''
+
+    def get(self, request):
+        return render(request, 'user_center_site.html', {'page': 'address'})
