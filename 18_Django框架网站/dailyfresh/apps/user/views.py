@@ -39,7 +39,7 @@ class RegisterView(View):
         # 3. 进行业务处理： 进行用户注册
         # 校验用户名是否重复
         try:
-            User.objects.get(username=username)
+            user = User.objects.get(username=username)
         except User.DoesNotExist:
             # 用户名不存在
             user = None
