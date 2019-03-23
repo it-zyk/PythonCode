@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.core.urlresolvers import reverse
 import re
-from user.models import User
+from user.models import User, Address
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
