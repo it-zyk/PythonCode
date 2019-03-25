@@ -2,5 +2,5 @@ from django.conf.urls import include, url
 from goods import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),  # 首页
+    url(r'^$', IndexView.as_view(), name='index'),  # 首页
 ]
