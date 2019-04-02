@@ -5,6 +5,7 @@ from django.core.cache import cache
 from goods.models import GoodsType, GoodsSKU, IndexGoodsBanner,IndexPromotionBanner,IndexTypeGoodsBanner
 from django_redis import get_redis_connection
 from order.models import OrderGoods
+from django.core.paginator import Paginator
 
 # Create your views here.
 
