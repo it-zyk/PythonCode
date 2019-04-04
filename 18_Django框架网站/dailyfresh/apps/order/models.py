@@ -4,8 +4,8 @@ from db.base_model import BaseModel
 
 
 class OrderInfo(BaseModel):
-
-        PAY_METHODS = {
+    '''订单模型类'''
+    PAY_METHODS = {
         '1': "货到付款",
         '2': "微信支付",
         '3': "支付宝",
@@ -16,7 +16,7 @@ class OrderInfo(BaseModel):
         "CASH": 1,
         "ALIPAY": 2
     }
-        ORDER_STATUS_ENUM = {
+    ORDER_STATUS_ENUM = {
         "UNPAID": 1,
         "UNSEND": 2,
         "UNRECEIVED": 3,
