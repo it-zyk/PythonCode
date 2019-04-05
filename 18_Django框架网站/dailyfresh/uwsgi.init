@@ -2,7 +2,7 @@
 #使用nginx连接时使用
 #socket=127.0.0.1:8085
 #直接做web服务器使用
-http=127.0.0.1:8080
+http=127.0.0.1:8085
 #项目目录
 chdir=/home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
 #项目中wsgi.py文件的目录，相对于项目目录
@@ -17,4 +17,4 @@ pidfile=uwsgi.pid
 #设置uwsgi后台运行，uwsgi.log保存日志信息
 daemonize=uwsgi.log
 #设置虚拟环境的路径
-virtualenv=/home/zyk/.virtualenvs/dailyfresh
+virtualenv=/home/zyk/.virtualenvs/bj18_py3
