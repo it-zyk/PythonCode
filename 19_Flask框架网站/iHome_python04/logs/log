@@ -1,0 +1,126 @@
+INFO                               _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO                               _internal.py:122  * Restarting with stat
+WARNING                               _internal.py:122  * Debugger is active!
+INFO                               _internal.py:122  * Debugger PIN: 303-229-444
+INFO                               _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO                               _internal.py:122  * Restarting with stat
+WARNING                               _internal.py:122  * Debugger is active!
+INFO                               _internal.py:122  * Debugger PIN: 303-229-444
+INFO                               _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO                               _internal.py:122  * Restarting with stat
+WARNING                               _internal.py:122  * Debugger is active!
+INFO                               _internal.py:122  * Debugger PIN: 303-229-444
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:05:34] "GET / HTTP/1.1" 500 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:05:35] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:05:35] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:05:35] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:05:35] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:05:35] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:05:35] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:05:40] "GET /index HTTP/1.1" 500 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:05:40] "GET /index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:05:40] "GET /index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:05:40] "GET /index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:05:41] "GET /index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:05:41] "GET /index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:05:41] "GET /index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO                               _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO                               _internal.py:122  * Restarting with stat
+WARNING                               _internal.py:122  * Debugger is active!
+INFO                               _internal.py:122  * Debugger PIN: 303-229-444
+ERROR                               demo.py:9 error msg
+WARNING                               demo.py:10 warn msg
+WARNING                               demo.py:11 warn msg
+INFO                               demo.py:12 info msg
+DEBUG                               demo.py:13 debug msg
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:09:01] "GET /api/v1.0/index HTTP/1.1" 500 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:09:01] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:09:01] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:09:01] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:09:01] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:09:01] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:09:01] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:11:52] "GET /api/v1_0/index HTTP/1.1" 500 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:11:52] "GET /api/v1_0/index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:11:52] "GET /api/v1_0/index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:11:52] "GET /api/v1_0/index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:11:52] "GET /api/v1_0/index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:11:52] "GET /api/v1_0/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:11:53] "GET /api/v1_0/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ERROR                               demo.py:9 error msg
+WARNING                               demo.py:10 warn msg
+WARNING                               demo.py:11 warn msg
+INFO                               demo.py:12 info msg
+DEBUG                               demo.py:13 debug msg
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:13:31] "GET /api/v1.0/index HTTP/1.1" 500 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:13:31] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:13:31] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:13:31] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:13:32] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:13:32] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ERROR                               demo.py:9 error msg
+WARNING                               demo.py:10 warn msg
+WARNING                               demo.py:11 warn msg
+INFO                               demo.py:12 info msg
+DEBUG                               demo.py:13 debug msg
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:14:02] "GET /api/v1.0/index HTTP/1.1" 500 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:14:02] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:14:02] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:14:02] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:14:03] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:14:03] "GET /api/v1.0/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO                               _internal.py:122  * Detected change in '/home/zyk/code/PythonCode/19_Flask框架网站/iHome_python04/config.py', reloading
+INFO                               _internal.py:122  * Restarting with stat
+WARNING                               _internal.py:122  * Debugger is active!
+INFO                               _internal.py:122  * Debugger PIN: 303-229-444
+ERROR                               demo.py:9 error msg
+WARNING                               demo.py:10 warn msg
+WARNING                               demo.py:11 warn msg
+INFO                               demo.py:12 info msg
+DEBUG                               demo.py:13 debug msg
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:18:08] "GET /api/v1.0/index HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:18:09] "GET /favicon.ico HTTP/1.1" 404 -
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:18:15] "GET /api/v1_0/index HTTP/1.1" 404 -
+ERROR                               demo.py:9 error msg
+WARNING                               demo.py:10 warn msg
+WARNING                               demo.py:11 warn msg
+INFO                               demo.py:12 info msg
+DEBUG                               demo.py:13 debug msg
+INFO                               _internal.py:122 127.0.0.1 - - [14/Apr/2019 22:18:20] "GET /api/v1.0/index HTTP/1.1" 200 -
+INFO                               _internal.py:122  * Detected change in '/home/zyk/code/PythonCode/19_Flask框架网站/iHome_python04/ihome/api_1_0/demo.py', reloading
+INFO                               _internal.py:122  * Restarting with stat
+INFO                               _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO                               _internal.py:122  * Restarting with stat
+WARNING                               _internal.py:122  * Debugger is active!
+INFO                               _internal.py:122  * Debugger PIN: 303-229-444
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:47:04] "GET / HTTP/1.1" 500 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:47:04] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:47:04] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:47:04] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:47:05] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:47:05] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO                               _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO                               _internal.py:122  * Restarting with stat
+WARNING                               _internal.py:122  * Debugger is active!
+INFO                               _internal.py:122  * Debugger PIN: 303-229-444
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:49:59] "GET / HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/plugins/swiper/css/swiper.min.css HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/css/ihome/index.css HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/images/logo@128x59.png HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/images/home01.jpg HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/plugins/swiper/js/swiper.jquery.min.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/js/template.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/js/ihome/index.js HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/images/home02.jpg HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/images/home03.jpg HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:00] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO                               _internal.py:122 127.0.0.1 - - [15/Apr/2019 11:50:01] "GET /favicon.ico HTTP/1.1" 404 -

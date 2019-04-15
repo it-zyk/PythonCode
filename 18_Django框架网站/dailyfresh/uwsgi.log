@@ -1,0 +1,594 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Apr  5 23:05:00 2019] ***
+compiled with version: 7.3.0 on 05 April 2019 14:19:26
+os: Linux-4.4.0-17134-Microsoft #648-Microsoft Tue Mar 05 18:57:00 PST 2019
+nodename: zhangyk
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/zyk/.virtualenvs/bj18_py3/bin/uwsgi
+chdir() to /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+your processes number limit is 7823
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+!!! it looks like your kernel does not support pthread robust mutexes !!!
+!!! falling back to standard pthread mutexes !!!
+thunder lock: disabled (you can enable it with --thunder-lock)
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+bind(): Permission denied [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Apr  5 23:24:01 2019] ***
+compiled with version: 7.3.0 on 05 April 2019 14:19:26
+os: Linux-4.4.0-17134-Microsoft #648-Microsoft Tue Mar 05 18:57:00 PST 2019
+nodename: zhangyk
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/zyk/.virtualenvs/bj18_py3/bin/uwsgi
+chdir() to /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+your processes number limit is 7823
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+!!! it looks like your kernel does not support pthread robust mutexes !!!
+!!! falling back to standard pthread mutexes !!!
+thunder lock: disabled (you can enable it with --thunder-lock)
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+uWSGI http bound on 127.0.0.1:8085 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:60740 (port auto-assigned) fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /home/zyk/.virtualenvs/bj18_py3
+Python main interpreter initialized at 0x7fffc1b30880
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 166752 bytes (162 KB) for 2 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7fffc1b30880 pid: 1824 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1824)
+spawned uWSGI worker 1 (pid: 1826, cores: 2)
+spawned uWSGI http 1 (pid: 1828)
+设置缓存
+[pid: 1826|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 761 bytes} [Fri Apr  5 23:24:55 2019] GET /index => generated 13287 bytes in 5292 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1826|app: 0|req: 2/2] 127.0.0.1 () {38 vars in 699 bytes} [Fri Apr  5 23:25:00 2019] GET /static/css/reset.css => generated 94 bytes in 20 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 1826|app: 0|req: 3/3] 127.0.0.1 () {38 vars in 697 bytes} [Fri Apr  5 23:25:00 2019] GET /static/css/main.css => generated 93 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 1826|app: 0|req: 4/4] 127.0.0.1 () {38 vars in 704 bytes} [Fri Apr  5 23:25:00 2019] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 1826|app: 0|req: 5/5] 127.0.0.1 () {38 vars in 696 bytes} [Fri Apr  5 23:25:00 2019] GET /static/js/jquery-ui.min.js => generated 100 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (2 switches on core 0)
+[pid: 1826|app: 0|req: 6/6] 127.0.0.1 () {38 vars in 680 bytes} [Fri Apr  5 23:25:00 2019] GET /static/js/slide.js => generated 92 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 1826|app: 0|req: 7/7] 127.0.0.1 () {38 vars in 724 bytes} [Fri Apr  5 23:25:01 2019] GET /static/images/logo.png => generated 96 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 1826|app: 0|req: 8/8] 127.0.0.1 () {38 vars in 702 bytes} [Fri Apr  5 23:25:01 2019] GET /favicon.ico => generated 85 bytes in 9 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 1828)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Apr  5 23:47:36 2019] ***
+compiled with version: 7.3.0 on 05 April 2019 14:19:26
+os: Linux-4.4.0-17134-Microsoft #648-Microsoft Tue Mar 05 18:57:00 PST 2019
+nodename: zhangyk
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/zyk/.virtualenvs/bj18_py3/bin/uwsgi
+chdir() to /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+your processes number limit is 7823
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+!!! it looks like your kernel does not support pthread robust mutexes !!!
+!!! falling back to standard pthread mutexes !!!
+thunder lock: disabled (you can enable it with --thunder-lock)
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+uWSGI http bound on 127.0.0.1:8085 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:62015 (port auto-assigned) fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /home/zyk/.virtualenvs/bj18_py3
+Python main interpreter initialized at 0x7ffff3563880
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 166752 bytes (162 KB) for 2 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x7ffff3563880 pid: 2041 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2041)
+spawned uWSGI worker 1 (pid: 2043, cores: 2)
+spawned uWSGI http 1 (pid: 2045)
+[pid: 2043|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 749 bytes} [Fri Apr  5 23:55:22 2019] GET / => generated 74 bytes in 1350 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 2/2] 127.0.0.1 () {38 vars in 761 bytes} [Fri Apr  5 23:56:02 2019] GET /index => generated 13287 bytes in 790 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 3/3] 127.0.0.1 () {38 vars in 699 bytes} [Fri Apr  5 23:56:03 2019] GET /static/css/reset.css => generated 94 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 4/4] 127.0.0.1 () {38 vars in 697 bytes} [Fri Apr  5 23:56:03 2019] GET /static/css/main.css => generated 93 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 5/5] 127.0.0.1 () {38 vars in 704 bytes} [Fri Apr  5 23:56:03 2019] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 6/6] 127.0.0.1 () {38 vars in 696 bytes} [Fri Apr  5 23:56:03 2019] GET /static/js/jquery-ui.min.js => generated 100 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 7/7] 127.0.0.1 () {38 vars in 680 bytes} [Fri Apr  5 23:56:03 2019] GET /static/js/slide.js => generated 92 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 8/8] 127.0.0.1 () {38 vars in 724 bytes} [Fri Apr  5 23:56:03 2019] GET /static/images/logo.png => generated 96 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 9/9] 127.0.0.1 () {38 vars in 761 bytes} [Sat Apr  6 00:05:34 2019] GET /index => generated 13287 bytes in 159 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 10/10] 127.0.0.1 () {38 vars in 699 bytes} [Sat Apr  6 00:05:34 2019] GET /static/css/reset.css => generated 94 bytes in 11 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 11/11] 127.0.0.1 () {38 vars in 697 bytes} [Sat Apr  6 00:05:35 2019] GET /static/css/main.css => generated 93 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (2 switches on core 1)
+[pid: 2043|app: 0|req: 13/12] 127.0.0.1 () {38 vars in 704 bytes} [Sat Apr  6 00:05:35 2019] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 21 msecs (HTTP/1.1 404) 2 headers in 80 bytes (2 switches on core 0)
+[pid: 2043|app: 0|req: 14/13] 127.0.0.1 () {38 vars in 680 bytes} [Sat Apr  6 00:05:35 2019] GET /static/js/slide.js => generated 92 bytes in 27 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 14/14] 127.0.0.1 () {38 vars in 696 bytes} [Sat Apr  6 00:05:35 2019] GET /static/js/jquery-ui.min.js => generated 100 bytes in 8 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 15/15] 127.0.0.1 () {38 vars in 724 bytes} [Sat Apr  6 00:05:35 2019] GET /static/images/logo.png => generated 96 bytes in 8 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 16/16] 127.0.0.1 () {38 vars in 680 bytes} [Sat Apr  6 00:05:35 2019] GET /static/js/slide.js => generated 92 bytes in 11 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 17/17] 127.0.0.1 () {36 vars in 660 bytes} [Sat Apr  6 00:15:18 2019] GET /index => generated 13280 bytes in 113 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 18/18] 127.0.0.1 () {36 vars in 598 bytes} [Sat Apr  6 00:15:18 2019] GET /static/css/reset.css => generated 94 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 20/19] 127.0.0.1 () {36 vars in 603 bytes} [Sat Apr  6 00:15:19 2019] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 21/20] 127.0.0.1 () {36 vars in 596 bytes} [Sat Apr  6 00:15:19 2019] GET /static/css/main.css => generated 93 bytes in 13 msecs (HTTP/1.1 404) 2 headers in 80 bytes (2 switches on core 1)
+[pid: 2043|app: 0|req: 22/21] 127.0.0.1 () {36 vars in 595 bytes} [Sat Apr  6 00:15:19 2019] GET /static/js/jquery-ui.min.js => generated 100 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 22/22] 127.0.0.1 () {36 vars in 579 bytes} [Sat Apr  6 00:15:19 2019] GET /static/js/slide.js => generated 92 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 23/23] 127.0.0.1 () {36 vars in 623 bytes} [Sat Apr  6 00:15:19 2019] GET /static/images/logo.png => generated 96 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 24/24] 127.0.0.1 () {36 vars in 595 bytes} [Sat Apr  6 00:15:19 2019] GET /static/js/jquery-ui.min.js => generated 100 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 25/25] 127.0.0.1 () {36 vars in 579 bytes} [Sat Apr  6 00:15:19 2019] GET /static/js/slide.js => generated 92 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+设置缓存
+[pid: 2043|app: 0|req: 26/26] 127.0.0.1 () {36 vars in 660 bytes} [Sat Apr  6 00:29:53 2019] GET /index => generated 13280 bytes in 165 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 27/27] 127.0.0.1 () {36 vars in 598 bytes} [Sat Apr  6 00:29:53 2019] GET /static/css/reset.css => generated 94 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 28/28] 127.0.0.1 () {36 vars in 596 bytes} [Sat Apr  6 00:29:53 2019] GET /static/css/main.css => generated 93 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 29/29] 127.0.0.1 () {36 vars in 603 bytes} [Sat Apr  6 00:29:53 2019] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 30/30] 127.0.0.1 () {36 vars in 595 bytes} [Sat Apr  6 00:29:53 2019] GET /static/js/jquery-ui.min.js => generated 100 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 31/31] 127.0.0.1 () {36 vars in 579 bytes} [Sat Apr  6 00:29:53 2019] GET /static/js/slide.js => generated 92 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 32/32] 127.0.0.1 () {36 vars in 623 bytes} [Sat Apr  6 00:29:53 2019] GET /static/images/logo.png => generated 96 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 33/33] 127.0.0.1 () {36 vars in 601 bytes} [Sat Apr  6 00:29:54 2019] GET /favicon.ico => generated 85 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 34/34] 127.0.0.1 () {36 vars in 650 bytes} [Sat Apr  6 00:46:04 2019] GET / => generated 74 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 35/35] 127.0.0.1 () {36 vars in 660 bytes} [Sat Apr  6 00:46:11 2019] GET /index => generated 13280 bytes in 110 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 36/36] 127.0.0.1 () {36 vars in 598 bytes} [Sat Apr  6 00:46:11 2019] GET /static/css/reset.css => generated 94 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 38/37] 127.0.0.1 () {36 vars in 595 bytes} [Sat Apr  6 00:46:11 2019] GET /static/js/jquery-ui.min.js => generated 100 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 39/38] 127.0.0.1 () {36 vars in 596 bytes} [Sat Apr  6 00:46:11 2019] GET /static/css/main.css => generated 93 bytes in 9 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 40/39] 127.0.0.1 () {36 vars in 579 bytes} [Sat Apr  6 00:46:11 2019] GET /static/js/slide.js => generated 92 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 40/40] 127.0.0.1 () {36 vars in 603 bytes} [Sat Apr  6 00:46:11 2019] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 11 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 2043|app: 0|req: 41/41] 127.0.0.1 () {36 vars in 623 bytes} [Sat Apr  6 00:46:11 2019] GET /static/images/logo.png => generated 96 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 42/42] 127.0.0.1 () {36 vars in 595 bytes} [Sat Apr  6 00:46:11 2019] GET /static/js/jquery-ui.min.js => generated 100 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 2043|app: 0|req: 43/43] 127.0.0.1 () {36 vars in 579 bytes} [Sat Apr  6 00:46:12 2019] GET /static/js/slide.js => generated 92 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (2 switches on core 1)
+[pid: 2043|app: 0|req: 44/44] 127.0.0.1 () {36 vars in 650 bytes} [Sat Apr  6 00:46:19 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Apr  6 12:55:54 2019] ***
+compiled with version: 7.3.0 on 05 April 2019 14:19:26
+os: Linux-4.4.0-17134-Microsoft #648-Microsoft Tue Mar 05 18:57:00 PST 2019
+nodename: zhangyk
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/zyk/.virtualenvs/bj18_py3/bin/uwsgi
+chdir() to /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+your processes number limit is 7823
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+!!! it looks like your kernel does not support pthread robust mutexes !!!
+!!! falling back to standard pthread mutexes !!!
+thunder lock: disabled (you can enable it with --thunder-lock)
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+uWSGI http bound on 127.0.0.1:8085 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:50276 (port auto-assigned) fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /home/zyk/.virtualenvs/bj18_py3
+Python main interpreter initialized at 0x7fffc33ee860
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 166752 bytes (162 KB) for 2 cores
+*** Operational MODE: threaded ***
+WSGI app 0 (mountpoint='') ready in 3 seconds on interpreter 0x7fffc33ee860 pid: 577 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 577)
+spawned uWSGI worker 1 (pid: 579, cores: 2)
+spawned uWSGI http 1 (pid: 581)
+设置缓存
+[pid: 579|app: 0|req: 1/1] 127.0.0.1 () {36 vars in 660 bytes} [Sat Apr  6 12:56:32 2019] GET /index => generated 13280 bytes in 7218 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 579|app: 0|req: 2/2] 127.0.0.1 () {36 vars in 598 bytes} [Sat Apr  6 12:56:39 2019] GET /static/css/reset.css => generated 94 bytes in 16 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 579|app: 0|req: 3/3] 127.0.0.1 () {36 vars in 596 bytes} [Sat Apr  6 12:56:39 2019] GET /static/css/main.css => generated 93 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (2 switches on core 0)
+[pid: 579|app: 0|req: 4/4] 127.0.0.1 () {36 vars in 603 bytes} [Sat Apr  6 12:56:40 2019] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 579|app: 0|req: 5/5] 127.0.0.1 () {36 vars in 595 bytes} [Sat Apr  6 12:56:40 2019] GET /static/js/jquery-ui.min.js => generated 100 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 579|app: 0|req: 6/6] 127.0.0.1 () {36 vars in 579 bytes} [Sat Apr  6 12:56:40 2019] GET /static/js/slide.js => generated 92 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 579|app: 0|req: 7/7] 127.0.0.1 () {36 vars in 623 bytes} [Sat Apr  6 12:56:40 2019] GET /static/images/logo.png => generated 96 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 579|app: 0|req: 8/8] 127.0.0.1 () {36 vars in 601 bytes} [Sat Apr  6 12:56:41 2019] GET /favicon.ico => generated 85 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 579|app: 0|req: 9/9] 127.0.0.1 () {38 vars in 691 bytes} [Sat Apr  6 12:59:27 2019] GET /index => generated 13280 bytes in 115 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 579|app: 0|req: 10/10] 127.0.0.1 () {36 vars in 598 bytes} [Sat Apr  6 12:59:27 2019] GET /static/css/reset.css => generated 94 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 579|app: 0|req: 12/11] 127.0.0.1 () {36 vars in 603 bytes} [Sat Apr  6 12:59:27 2019] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 9 msecs (HTTP/1.1 404) 2 headers in 80 bytes (2 switches on core 0)
+[pid: 579|app: 0|req: 12/12] 127.0.0.1 () {36 vars in 596 bytes} [Sat Apr  6 12:59:27 2019] GET /static/css/main.css => generated 93 bytes in 10 msecs (HTTP/1.1 404) 2 headers in 80 bytes (2 switches on core 1)
+[pid: 579|app: 0|req: 13/13] 127.0.0.1 () {36 vars in 595 bytes} [Sat Apr  6 12:59:27 2019] GET /static/js/jquery-ui.min.js => generated 100 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 579|app: 0|req: 15/14] 127.0.0.1 () {36 vars in 623 bytes} [Sat Apr  6 12:59:27 2019] GET /static/images/logo.png => generated 96 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 579|app: 0|req: 15/15] 127.0.0.1 () {36 vars in 579 bytes} [Sat Apr  6 12:59:27 2019] GET /static/js/slide.js => generated 92 bytes in 11 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 579|app: 0|req: 16/16] 127.0.0.1 () {36 vars in 595 bytes} [Sat Apr  6 12:59:28 2019] GET /static/js/jquery-ui.min.js => generated 100 bytes in 9 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 579|app: 0|req: 17/17] 127.0.0.1 () {36 vars in 579 bytes} [Sat Apr  6 12:59:28 2019] GET /static/js/slide.js => generated 92 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 581)
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Apr  6 21:21:10 2019] ***
+compiled with version: 7.3.0 on 05 April 2019 14:19:26
+os: Linux-4.4.0-17134-Microsoft #648-Microsoft Tue Mar 05 18:57:00 PST 2019
+nodename: zhangyk
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/zyk/.virtualenvs/bj18_py3/bin/uwsgi
+chdir() to /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+your processes number limit is 7823
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+!!! it looks like your kernel does not support pthread robust mutexes !!!
+!!! falling back to standard pthread mutexes !!!
+thunder lock: disabled (you can enable it with --thunder-lock)
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+uWSGI http bound on 127.0.0.1:8085 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:52219 (port auto-assigned) fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /home/zyk/.virtualenvs/bj18_py3
+Python main interpreter initialized at 0x7ffff4698860
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x7ffff4698860 pid: 1243 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1243)
+spawned uWSGI worker 1 (pid: 1245, cores: 2)
+spawned uWSGI worker 2 (pid: 1247, cores: 2)
+spawned uWSGI worker 3 (pid: 1249, cores: 2)
+spawned uWSGI worker 4 (pid: 1251, cores: 2)
+spawned uWSGI http 1 (pid: 1253)
+设置缓存
+[pid: 1249|app: 0|req: 1/1] 127.0.0.1 () {36 vars in 659 bytes} [Sat Apr  6 21:55:00 2019] GET /index => generated 13280 bytes in 2721 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1249|app: 0|req: 3/2] 127.0.0.1 () {36 vars in 579 bytes} [Sat Apr  6 21:55:04 2019] GET /static/js/slide.js => generated 92 bytes in 15 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 1249|app: 0|req: 3/3] 127.0.0.1 () {36 vars in 623 bytes} [Sat Apr  6 21:55:04 2019] GET /static/images/logo.png => generated 96 bytes in 14 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 1245|app: 0|req: 2/4] 127.0.0.1 () {36 vars in 595 bytes} [Sat Apr  6 21:55:04 2019] GET /static/css/main.css => generated 93 bytes in 1575 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 1245|app: 0|req: 2/5] 127.0.0.1 () {36 vars in 597 bytes} [Sat Apr  6 21:55:03 2019] GET /static/css/reset.css => generated 94 bytes in 1899 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 1247|app: 0|req: 2/6] 127.0.0.1 () {36 vars in 594 bytes} [Sat Apr  6 21:55:04 2019] GET /static/js/jquery-ui.min.js => generated 100 bytes in 1768 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 1)
+[pid: 1247|app: 0|req: 2/7] 127.0.0.1 () {36 vars in 602 bytes} [Sat Apr  6 21:55:04 2019] GET /static/js/jquery-1.12.4.min.js => generated 104 bytes in 1801 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 1245|app: 0|req: 3/8] 127.0.0.1 () {36 vars in 595 bytes} [Sat Apr  6 21:55:06 2019] GET /static/js/jquery-ui.min.js => generated 100 bytes in 14 msecs (HTTP/1.1 404) 2 headers in 80 bytes (2 switches on core 1)
+[pid: 1245|app: 0|req: 4/9] 127.0.0.1 () {36 vars in 579 bytes} [Sat Apr  6 21:55:06 2019] GET /static/js/slide.js => generated 92 bytes in 30 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 1247|app: 0|req: 3/10] 127.0.0.1 () {36 vars in 601 bytes} [Sat Apr  6 21:55:07 2019] GET /favicon.ico => generated 85 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 80 bytes (2 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 1253)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Apr  6 22:25:39 2019] ***
+compiled with version: 7.3.0 on 05 April 2019 14:19:26
+os: Linux-4.4.0-17134-Microsoft #648-Microsoft Tue Mar 05 18:57:00 PST 2019
+nodename: zhangyk
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/zyk/.virtualenvs/bj18_py3/bin/uwsgi
+chdir() to /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+your processes number limit is 7823
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+!!! it looks like your kernel does not support pthread robust mutexes !!!
+!!! falling back to standard pthread mutexes !!!
+thunder lock: disabled (you can enable it with --thunder-lock)
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+uWSGI http bound on 127.0.0.1:8085 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:53298 (port auto-assigned) fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /home/zyk/.virtualenvs/bj18_py3
+Python main interpreter initialized at 0x7fffe1aef860
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x7fffe1aef860 pid: 1652 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1652)
+spawned uWSGI worker 1 (pid: 1654, cores: 2)
+spawned uWSGI worker 2 (pid: 1656, cores: 2)
+spawned uWSGI worker 3 (pid: 1658, cores: 2)
+spawned uWSGI worker 4 (pid: 1660, cores: 2)
+spawned uWSGI http 1 (pid: 1662)
+[pid: 1654|app: 0|req: 1/1] 127.0.0.1 () {36 vars in 660 bytes} [Sat Apr  6 22:26:07 2019] GET /index => generated 13280 bytes in 1592 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1654|app: 0|req: 3/2] 127.0.0.1 () {36 vars in 598 bytes} [Sat Apr  6 22:26:09 2019] GET /static/css/reset.css => generated 13280 bytes in 513 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 1654|app: 0|req: 3/3] 127.0.0.1 () {36 vars in 623 bytes} [Sat Apr  6 22:26:09 2019] GET /static/images/logo.png => generated 13280 bytes in 833 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1658|app: 0|req: 1/4] 127.0.0.1 () {36 vars in 595 bytes} [Sat Apr  6 22:26:09 2019] GET /static/js/jquery-ui.min.js => generated 13280 bytes in 3597 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1660|app: 0|req: 1/5] 127.0.0.1 () {36 vars in 596 bytes} [Sat Apr  6 22:26:09 2019] GET /static/css/main.css => generated 13280 bytes in 3615 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1656|app: 0|req: 2/6] 127.0.0.1 () {36 vars in 603 bytes} [Sat Apr  6 22:26:09 2019] GET /static/js/jquery-1.12.4.min.js => generated 13280 bytes in 4042 msecs (HTTP/1.1 200) 3 headers in 102 bytes (2 switches on core 0)
+[pid: 1656|app: 0|req: 2/7] 127.0.0.1 () {36 vars in 579 bytes} [Sat Apr  6 22:26:09 2019] GET /static/js/slide.js => generated 13280 bytes in 4051 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 1662)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Apr  6 23:01:08 2019] ***
+compiled with version: 7.3.0 on 05 April 2019 14:19:26
+os: Linux-4.4.0-17134-Microsoft #648-Microsoft Tue Mar 05 18:57:00 PST 2019
+nodename: zhangyk
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/zyk/.virtualenvs/bj18_py3/bin/uwsgi
+chdir() to /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+your processes number limit is 7823
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+!!! it looks like your kernel does not support pthread robust mutexes !!!
+!!! falling back to standard pthread mutexes !!!
+thunder lock: disabled (you can enable it with --thunder-lock)
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+uwsgi socket 0 bound to TCP address 127.0.0.1:8085 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /home/zyk/.virtualenvs/bj18_py3
+Python main interpreter initialized at 0x7fffcf2ba7b0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fffcf2ba7b0 pid: 1815 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1815)
+spawned uWSGI worker 1 (pid: 1817, cores: 2)
+spawned uWSGI worker 2 (pid: 1819, cores: 2)
+spawned uWSGI worker 3 (pid: 1821, cores: 2)
+spawned uWSGI worker 4 (pid: 1823, cores: 2)
+设置缓存
+[pid: 1817|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 693 bytes} [Sat Apr  6 23:01:35 2019] GET /index => generated 13280 bytes in 1804 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1817|app: 0|req: 2/2] 127.0.0.1 () {38 vars in 629 bytes} [Sat Apr  6 23:01:38 2019] GET /favicon.ico => generated 13280 bytes in 107 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 1817|app: 0|req: 3/3] 127.0.0.1 () {40 vars in 737 bytes} [Sat Apr  6 23:01:54 2019] GET /goods/24 => generated 9323 bytes in 71 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 1817|app: 0|req: 4/4] 127.0.0.1 () {40 vars in 689 bytes} [Sat Apr  6 23:01:55 2019] GET /favicon.ico => generated 13280 bytes in 95 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 1817|app: 0|req: 5/5] 127.0.0.1 () {40 vars in 750 bytes} [Sat Apr  6 23:01:59 2019] GET /index => generated 13280 bytes in 100 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1817|app: 0|req: 6/6] 127.0.0.1 () {40 vars in 686 bytes} [Sat Apr  6 23:01:59 2019] GET /favicon.ico => generated 13280 bytes in 136 msecs (HTTP/1.1 200) 3 headers in 102 bytes (2 switches on core 1)
+[pid: 1817|app: 0|req: 7/7] 127.0.0.1 () {42 vars in 794 bytes} [Sat Apr  6 23:02:01 2019] GET /goods/28 => generated 9320 bytes in 47 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 1817|app: 0|req: 8/8] 127.0.0.1 () {40 vars in 689 bytes} [Sat Apr  6 23:02:01 2019] GET /favicon.ico => generated 13280 bytes in 133 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 1817|app: 0|req: 9/9] 127.0.0.1 () {40 vars in 686 bytes} [Sat Apr  6 23:02:04 2019] GET /favicon.ico => generated 13280 bytes in 124 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1817|app: 0|req: 10/10] 127.0.0.1 () {40 vars in 681 bytes} [Sat Apr  6 23:24:57 2019] GET /favicon.ico => generated 13280 bytes in 117 msecs (HTTP/1.1 200) 3 headers in 102 bytes (2 switches on core 1)
+设置缓存
+[pid: 1817|app: 0|req: 11/11] 127.0.0.1 () {40 vars in 750 bytes} [Sun Apr  7 16:52:14 2019] GET /index => generated 13280 bytes in 392 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 1817|app: 0|req: 12/12] 127.0.0.1 () {40 vars in 750 bytes} [Sun Apr  7 16:54:33 2019] GET /index => generated 13280 bytes in 320 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 1817|app: 0|req: 13/13] 127.0.0.1 () {40 vars in 686 bytes} [Sun Apr  7 16:54:35 2019] GET /favicon.ico => generated 13280 bytes in 110 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Apr 12 11:31:21 2019] ***
+compiled with version: 7.3.0 on 05 April 2019 14:19:26
+os: Linux-4.4.0-17134-Microsoft #706-Microsoft Mon Apr 01 18:13:00 PST 2019
+nodename: zhangyk
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/zyk/.virtualenvs/bj18_py3/bin/uwsgi
+chdir() to /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+your processes number limit is 7823
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+!!! it looks like your kernel does not support pthread robust mutexes !!!
+!!! falling back to standard pthread mutexes !!!
+thunder lock: disabled (you can enable it with --thunder-lock)
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+uwsgi socket 0 bound to TCP address 127.0.0.1:8085 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /home/zyk/.virtualenvs/bj18_py3
+Python main interpreter initialized at 0x7fffbeec6770
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fffbeec6770 pid: 6482 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6482)
+spawned uWSGI worker 1 (pid: 6484, cores: 2)
+spawned uWSGI worker 2 (pid: 6486, cores: 2)
+spawned uWSGI worker 3 (pid: 6488, cores: 2)
+spawned uWSGI worker 4 (pid: 6490, cores: 2)
+invalid request block size: 4859 (max 4096)...skip
+invalid request block size: 4795 (max 4096)...skip
+invalid request block size: 4890 (max 4096)...skip
+invalid request block size: 4795 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 4849 (max 4096)...skip
+invalid request block size: 4790 (max 4096)...skip
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Apr 12 11:37:46 2019] ***
+compiled with version: 7.3.0 on 05 April 2019 14:19:26
+os: Linux-4.4.0-17134-Microsoft #706-Microsoft Mon Apr 01 18:13:00 PST 2019
+nodename: zhangyk
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/zyk/.virtualenvs/bj18_py3/bin/uwsgi
+chdir() to /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+your processes number limit is 7823
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+!!! it looks like your kernel does not support pthread robust mutexes !!!
+!!! falling back to standard pthread mutexes !!!
+thunder lock: disabled (you can enable it with --thunder-lock)
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+uWSGI http bound on 127.0.0.1:8085 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:60682 (port auto-assigned) fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /home/zyk/.virtualenvs/bj18_py3
+Python main interpreter initialized at 0x7fffbc7ba860
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fffbc7ba860 pid: 6711 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6711)
+spawned uWSGI worker 1 (pid: 6713, cores: 2)
+spawned uWSGI worker 2 (pid: 6715, cores: 2)
+spawned uWSGI worker 3 (pid: 6717, cores: 2)
+spawned uWSGI worker 4 (pid: 6719, cores: 2)
+spawned uWSGI http 1 (pid: 6721)
+invalid request block size: 4825 (max 4096)...skip
+invalid request block size: 4856 (max 4096)...skip
+invalid request block size: 4856 (max 4096)...skip
+invalid request block size: 4856 (max 4096)...skip
+invalid request block size: 4856 (max 4096)...skip
+invalid request block size: 4816 (max 4096)...skip
+invalid request block size: 4816 (max 4096)...skip
+invalid request block size: 4847 (max 4096)...skip
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 6721)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Apr 12 11:50:33 2019] ***
+compiled with version: 7.3.0 on 05 April 2019 14:19:26
+os: Linux-4.4.0-17134-Microsoft #706-Microsoft Mon Apr 01 18:13:00 PST 2019
+nodename: zhangyk
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/zyk/.virtualenvs/bj18_py3/bin/uwsgi
+chdir() to /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+your processes number limit is 7823
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+!!! it looks like your kernel does not support pthread robust mutexes !!!
+!!! falling back to standard pthread mutexes !!!
+thunder lock: disabled (you can enable it with --thunder-lock)
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+uWSGI http bound on 127.0.0.1:8085 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:61349 (port auto-assigned) fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /home/zyk/.virtualenvs/bj18_py3
+Python main interpreter initialized at 0x7ffff4a34860
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7ffff4a34860 pid: 7212 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7212)
+spawned uWSGI worker 1 (pid: 7214, cores: 2)
+spawned uWSGI worker 2 (pid: 7216, cores: 2)
+spawned uWSGI worker 3 (pid: 7218, cores: 2)
+spawned uWSGI worker 4 (pid: 7220, cores: 2)
+spawned uWSGI http 1 (pid: 7222)
+[pid: 7214|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 762 bytes} [Fri Apr 12 11:50:55 2019] GET /index => generated 13179 bytes in 1032 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7214|app: 0|req: 3/2] 127.0.0.1 () {38 vars in 700 bytes} [Fri Apr 12 11:50:56 2019] GET /static/css/reset.css => generated 13179 bytes in 553 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7214|app: 0|req: 3/3] 127.0.0.1 () {38 vars in 705 bytes} [Fri Apr 12 11:50:56 2019] GET /static/js/jquery-1.12.4.min.js => generated 13179 bytes in 549 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7218|app: 0|req: 2/4] 127.0.0.1 () {38 vars in 725 bytes} [Fri Apr 12 11:50:56 2019] GET /static/images/logo.png => generated 13179 bytes in 2076 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7216|app: 0|req: 2/5] 127.0.0.1 () {38 vars in 697 bytes} [Fri Apr 12 11:50:56 2019] GET /static/js/jquery-ui.min.js => generated 13179 bytes in 2084 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7216|app: 0|req: 2/6] 127.0.0.1 () {38 vars in 698 bytes} [Fri Apr 12 11:50:56 2019] GET /static/css/main.css => generated 13179 bytes in 2099 msecs (HTTP/1.1 200) 3 headers in 102 bytes (2 switches on core 0)
+[pid: 7218|app: 0|req: 2/7] 127.0.0.1 () {38 vars in 681 bytes} [Fri Apr 12 11:50:56 2019] GET /static/js/slide.js => generated 13179 bytes in 2104 msecs (HTTP/1.1 200) 3 headers in 102 bytes (2 switches on core 0)
+[pid: 7214|app: 0|req: 4/8] 127.0.0.1 () {38 vars in 703 bytes} [Fri Apr 12 11:50:59 2019] GET /favicon.ico => generated 13179 bytes in 139 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7214|app: 0|req: 5/9] 127.0.0.1 () {38 vars in 761 bytes} [Fri Apr 12 11:51:01 2019] GET /index => generated 13179 bytes in 137 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7218|app: 0|req: 3/10] 127.0.0.1 () {38 vars in 680 bytes} [Fri Apr 12 11:51:02 2019] GET /static/js/slide.js => generated 13179 bytes in 216 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7214|app: 0|req: 7/11] 127.0.0.1 () {38 vars in 699 bytes} [Fri Apr 12 11:51:02 2019] GET /static/css/reset.css => generated 13179 bytes in 335 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7216|app: 0|req: 4/12] 127.0.0.1 () {38 vars in 696 bytes} [Fri Apr 12 11:51:02 2019] GET /static/js/jquery-ui.min.js => generated 13179 bytes in 341 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7216|app: 0|req: 4/13] 127.0.0.1 () {38 vars in 697 bytes} [Fri Apr 12 11:51:02 2019] GET /static/css/main.css => generated 13179 bytes in 348 msecs (HTTP/1.1 200) 3 headers in 102 bytes (2 switches on core 1)
+[pid: 7214|app: 0|req: 8/14] 127.0.0.1 () {38 vars in 704 bytes} [Fri Apr 12 11:51:02 2019] GET /static/js/jquery-1.12.4.min.js => generated 13179 bytes in 353 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7214|app: 0|req: 8/15] 127.0.0.1 () {38 vars in 724 bytes} [Fri Apr 12 11:51:02 2019] GET /static/images/logo.png => generated 13179 bytes in 229 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7214|app: 0|req: 9/16] 127.0.0.1 () {38 vars in 702 bytes} [Fri Apr 12 11:51:02 2019] GET /favicon.ico => generated 13179 bytes in 86 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 7222)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Apr 12 11:52:53 2019] ***
+compiled with version: 7.3.0 on 05 April 2019 14:19:26
+os: Linux-4.4.0-17134-Microsoft #706-Microsoft Mon Apr 01 18:13:00 PST 2019
+nodename: zhangyk
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 4
+current working directory: /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+writing pidfile to uwsgi.pid
+detected binary path: /home/zyk/.virtualenvs/bj18_py3/bin/uwsgi
+chdir() to /home/zyk/code/PythonCode/18_Django框架网站/dailyfresh
+your processes number limit is 7823
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+!!! it looks like your kernel does not support pthread robust mutexes !!!
+!!! falling back to standard pthread mutexes !!!
+thunder lock: disabled (you can enable it with --thunder-lock)
+TCP_DEFER_ACCEPT setsockopt(): Protocol not available [core/socket.c line 744]
+uwsgi socket 0 bound to TCP address 127.0.0.1:8085 fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /home/zyk/.virtualenvs/bj18_py3
+Python main interpreter initialized at 0x7fffd25ce770
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 416880 bytes (407 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x7fffd25ce770 pid: 7355 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7355)
+spawned uWSGI worker 1 (pid: 7357, cores: 2)
+spawned uWSGI worker 2 (pid: 7359, cores: 2)
+spawned uWSGI worker 3 (pid: 7361, cores: 2)
+spawned uWSGI worker 4 (pid: 7363, cores: 2)
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+invalid request block size: 21573 (max 4096)...skip
+[pid: 7359|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 694 bytes} [Fri Apr 12 11:53:16 2019] GET /index => generated 13172 bytes in 1109 msecs (HTTP/1.1 200) 3 headers in 102 bytes (2 switches on core 0)
+[pid: 7357|app: 0|req: 1/2] 127.0.0.1 () {38 vars in 630 bytes} [Fri Apr 12 11:53:18 2019] GET /favicon.ico => generated 13172 bytes in 1081 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7357|app: 0|req: 2/3] 127.0.0.1 () {38 vars in 630 bytes} [Fri Apr 12 11:53:26 2019] GET /favicon.ico => generated 13172 bytes in 105 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7357|app: 0|req: 3/4] 127.0.0.1 () {40 vars in 736 bytes} [Fri Apr 12 11:53:28 2019] GET /goods/6 => generated 9310 bytes in 47 msecs (HTTP/1.1 200) 4 headers in 224 bytes (2 switches on core 0)
+[pid: 7357|app: 0|req: 4/5] 127.0.0.1 () {40 vars in 689 bytes} [Fri Apr 12 11:53:29 2019] GET /favicon.ico => generated 13172 bytes in 82 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7361|app: 0|req: 1/6] 127.0.0.1 () {40 vars in 751 bytes} [Fri Apr 12 11:53:30 2019] GET /index => generated 13172 bytes in 1118 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+[pid: 7357|app: 0|req: 5/7] 127.0.0.1 () {40 vars in 687 bytes} [Fri Apr 12 11:53:32 2019] GET /favicon.ico => generated 13172 bytes in 100 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7357|app: 0|req: 6/8] 127.0.0.1 () {42 vars in 795 bytes} [Fri Apr 12 11:53:35 2019] GET /goods/10 => generated 9308 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 224 bytes (2 switches on core 1)
+[pid: 7357|app: 0|req: 7/9] 127.0.0.1 () {40 vars in 690 bytes} [Fri Apr 12 11:53:35 2019] GET /favicon.ico => generated 13172 bytes in 75 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 7357|app: 0|req: 8/10] 127.0.0.1 () {40 vars in 687 bytes} [Fri Apr 12 11:53:37 2019] GET /favicon.ico => generated 13172 bytes in 115 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.

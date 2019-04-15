@@ -1,0 +1,75 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+</head>
+<body>
+    
+    <form method="post">
+       {{ form.csrf_token }}
+       {{ form.author_name.label }}
+            <p> {{ form.author_name }}</p>
+            {% for msg in form.author_name.errors %}
+                <p>{{ msg }}</p>
+             {% endfor %}
+
+         {{ form.book_name.label }}
+             <p> {{ form.book_name }} </p>
+             {% for msg in form.book_name.errors %}
+                  <p> {{ msg}}</p>
+             {% endfor %}
+            
+         {{ form.submit }}
+
+    </form>
+    <ul>
+        {% for author in authors %}
+        <li> 作者：{{ author.name }} </li>
+            <ul>
+                 {% for book in author.books %} 
+                 <li> 书籍： {{ book.name}}  </li> 
+                 <a href="javascript:;" book_id="{{ book.id }}" >删除 </a>
+                 {% endfor %}
+            </ul>
+               <li></li>
+         {% endfor %}
+    </ul>
+    <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        $("a").click(
+            function delete_bookBook(){
+                    var data ={
+                            book_id: $(this).attr("book_id") 
+                        };
+                    var req_json = JSON.stringify(data);
+              //     $.post("/delete_book", req_json, function(data) {
+              //             if(data.code == 0) {
+              //                     location.href ="/";
+              //                 }                       
+              //         }
+              // }
+
+
+               $.ajax({
+                    url: "/delete_book",
+                    type: "post",
+                    data: req_json,
+                    contentType: "applicatiion/json",
+                    dataType: "json",
+                    success: function(res) {
+                            if (res.code == 0) {
+                                    location.href ="/";
+                                }
+                        }
+
+                   }
+               );
+           }
+        )
+    </script>
+</body>
+</html
+
