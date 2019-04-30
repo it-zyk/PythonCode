@@ -3,8 +3,8 @@ from ihome import constants
 
 
 class FDFSStorage(object):
-        '''fast dfs文件存储类'''
-        def __init__(self, client_conf=None, base_url=None):
+    '''fast dfs文件存储类'''
+    def __init__(self, client_conf=None, base_url=None):
             '''初始化'''
             if client_conf is None:
                 client_conf = constants.FDFS_CLIENT_CONF
