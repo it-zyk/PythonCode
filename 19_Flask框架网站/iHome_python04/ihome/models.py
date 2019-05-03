@@ -10,7 +10,8 @@ class BaseModel(object):
     """模型基类，为每个模型补充创建时间与更新时间"""
 
     create_time = db.Column(db.DateTime, default=datetime.now)  # 记录的创建时间
-    update_time = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now)  # 记录的更新时间
+    update_time = db.Column(
+        db.DateTime, default=datetime.now, onupdate=datetime.now)  # 记录的更新时间
 
 
 class User(BaseModel, db.Model):
@@ -28,7 +29,6 @@ class User(BaseModel, db.Model):
     houses = db.relationship("House", backref="user")  # 用户发布的房屋
     orders = db.relationship("Order", backref="user")  # 用户下的订单
 
-
     @property
     def password(self):
         """读取属性的函数行为"""
@@ -37,8 +37,8 @@ class User(BaseModel, db.Model):
         # return "xxxx"
         raise AttributeError("这个属性只能设置，不能读取")
 
-
     # 使用这个装饰器, 对应设置属性操作
+
     @password.setter
     def password(self, value):
         """
@@ -65,7 +65,6 @@ class User(BaseModel, db.Model):
         return check_password_hash(self.password_hash, passwd)
 
 
-
 class Area(BaseModel, db.Model):
     """城区"""
 
@@ -75,12 +74,22 @@ class Area(BaseModel, db.Model):
     name = db.Column(db.String(32), nullable=False)  # 区域名字
     houses = db.relationship("House", backref="area")  # 区域的房屋
 
+    def to_dict(self):
+        """将对象转换为字典"""
+        d = {
+            "aid": self.id,
+            "aname": self.name
+        }
+        return d
+
 
 # 房屋设施表，建立房屋与设施的多对多关系
 house_facility = db.Table(
     "ih_house_facility",
-    db.Column("house_id", db.Integer, db.ForeignKey("ih_house_info.id"), primary_key=True),  # 房屋编号
-    db.Column("facility_id", db.Integer, db.ForeignKey("ih_facility_info.id"), primary_key=True)  # 设施编号
+    db.Column("house_id", db.Integer, db.ForeignKey(
+        "ih_house_info.id"), primary_key=True),  # 房屋编号
+    db.Column("facility_id", db.Integer, db.ForeignKey(
+        "ih_facility_info.id"), primary_key=True)  # 设施编号
 )
 
 
@@ -90,8 +99,10 @@ class House(BaseModel, db.Model):
     __tablename__ = "ih_house_info"
 
     id = db.Column(db.Integer, primary_key=True)  # 房屋编号
-    user_id = db.Column(db.Integer, db.ForeignKey("ih_user_profile.id"), nullable=False)  # 房屋主人的用户编号
-    area_id = db.Column(db.Integer, db.ForeignKey("ih_area_info.id"), nullable=False)  # 归属地的区域编号
+    user_id = db.Column(db.Integer, db.ForeignKey(
+        "ih_user_profile.id"), nullable=False)  # 房屋主人的用户编号
+    area_id = db.Column(db.Integer, db.ForeignKey(
+        "ih_area_info.id"), nullable=False)  # 归属地的区域编号
     title = db.Column(db.String(64), nullable=False)  # 标题
     price = db.Column(db.Integer, default=0)  # 单价，单位：分
     address = db.Column(db.String(512), default="")  # 地址
@@ -125,7 +136,8 @@ class HouseImage(BaseModel, db.Model):
     __tablename__ = "ih_house_image"
 
     id = db.Column(db.Integer, primary_key=True)
-    house_id = db.Column(db.Integer, db.ForeignKey("ih_house_info.id"), nullable=False)  # 房屋编号
+    house_id = db.Column(db.Integer, db.ForeignKey(
+        "ih_house_info.id"), nullable=False)  # 房屋编号
     url = db.Column(db.String(256), nullable=False)  # 图片的路径
 
 
@@ -135,8 +147,10 @@ class Order(BaseModel, db.Model):
     __tablename__ = "ih_order_info"
 
     id = db.Column(db.Integer, primary_key=True)  # 订单编号
-    user_id = db.Column(db.Integer, db.ForeignKey("ih_user_profile.id"), nullable=False)  # 下订单的用户编号
-    house_id = db.Column(db.Integer, db.ForeignKey("ih_house_info.id"), nullable=False)  # 预订的房间编号
+    user_id = db.Column(db.Integer, db.ForeignKey(
+        "ih_user_profile.id"), nullable=False)  # 下订单的用户编号
+    house_id = db.Column(db.Integer, db.ForeignKey(
+        "ih_house_info.id"), nullable=False)  # 预订的房间编号
     begin_date = db.Column(db.DateTime, nullable=False)  # 预订的起始时间
     end_date = db.Column(db.DateTime, nullable=False)  # 预订的结束时间
     days = db.Column(db.Integer, nullable=False)  # 预订的总天数
