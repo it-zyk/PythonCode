@@ -19,7 +19,8 @@ LOGIN_ERROR_FORBID_TIME = 600
 FDFS_URL = 'http://10.2.90.78:8888/'
 
 # 设置fdfs使用的client.conf文件路径
-FDFS_CLIENT_CONF = './utils/client.conf'
+# FDFS_CLIENT_CONF = './utils/client.conf'
+FDFS_CLIENT_CONF = '/etc/fdfs/client.conf'
 
 # 城区信息的缓存时间, 单位：秒
 AREA_INFO_REDIS_CACHE_EXPIRES = 7200
