@@ -4,7 +4,7 @@ from flask import g, current_app, jsonify, request
 from ihome.utils.response_code import RET
 from ihome.models import Area
 from ihome import db, constants, redis_store
-from json
+import json
 
 
 @api.route("/areas")
