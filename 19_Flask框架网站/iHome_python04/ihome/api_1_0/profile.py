@@ -1,6 +1,6 @@
 from . import api
 from ihome.utils.commons import login_required
-from flask import g, current_app, jsonify, request
+from flask import g, current_app, jsonify, request, session
 from ihome.utils.response_code import RET
 from ihome.utils.image_storage import FDFSStorage
 from ihome.models import User

@@ -15,8 +15,7 @@ class FDFSStorage(object):
             self.base_url = base_url
 
     def storage(self, file_data):
-        # 创建一个Fdfs_client对象
-        print(self.client_conf)
+        # 创建一个Fdfs_client对象 
         client = Fdfs_client(self.client_conf)
 
         # 上传文件到fast dfs系统中
