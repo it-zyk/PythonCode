@@ -7,9 +7,10 @@ from ihome.models import User
 # from ihome.libs.yuntongxun.sms import CCP
 from ihome.libs.yixintong.sms import SMSSend
 import random
-
+from ihome.tasks.task_sms import send_sms
 
 # GET 127.0.0.1/api/v1.0/image_code/<image_code_id>
+
 
 @api.route("/image_codes/<image_code_id>")
 def get_image_code(image_code_id):
@@ -85,7 +86,7 @@ def get_sms_code(mobile):
 
     if real_image_code.decode().lower() != image_code.lower():
         # 表示用户填写验证码错误
-        return jsonify(error=RET.DATAERR, errmsg="图片验证码错误" )
+        return jsonify(error=RET.DATAERR, errmsg="图片验证码错误")
 
     # 判断对于这个手机号的操作，在60秒内有没有记录，如果有，则认为用户操作频繁，不接受处理
     try:
@@ -116,33 +117,37 @@ def get_sms_code(mobile):
         redis_store.setex("sms_code_%s" % mobile,
                           constants.SMS_CODE_REDIS_EXPIRES, sms_codes)
         # 保存发送给这个手机号的记录，防止用户在60s内再次发送短信的操作
-        redis_store.setex("send_sms_code_%s" % mobile, constants.SEND_SMS_CODE_INTERVAL, 1)
+        redis_store.setex("send_sms_code_%s" %
+                          mobile, constants.SEND_SMS_CODE_INTERVAL, 1)
     except Exception as e:
         current_app.logger.error(e)
         return jsonify(errno=RET.DBERR, errmsg="保存短信码异常")
 
     # 发送短信
-    try:
-        ccp = SMSSend()
-        # sms_info_dic = [sms_codes, int(constants.SMS_CODE_REDIS_EXPIRES/63)]
-        # result = ccp.send_template_sms(mobile, sms_info_dic)
-        sms_data_info = "您的登陆验证码是：%s"  % sms_codes
-        result = ccp.send_message_info(mobile, sms_data_info)
-    except Exception as e:
-        current_app.logger.error(e)
-        return jsonify(errno=RET.THIRDERR, errmsg="发送异常")
+    # try:
+    #     ccp = SMSSend()
+    #     # sms_info_dic = [sms_codes, int(constants.SMS_CODE_REDIS_EXPIRES/63)]
+    #     # result = ccp.send_template_sms(mobile, sms_info_dic)
+    #     sms_data_info = "您的登陆验证码是：%s"  % sms_codes
+    #     result = ccp.send_message_info(mobile, sms_data_info)
+    # except Exception as e:
+    #     current_app.logger.error(e)
+    #     return jsonify(errno=RET.THIRDERR, errmsg="发送异常")
+    sms_data_info = "您的登陆验证码是：%s" % sms_codes
+    send_sms.delay(mobile,  sms_data_info)
+    return jsonify(errno=RET.OK, errmsg="发送成功")
 
-    if result == 0:
-        # 发送成功
-        return jsonify(errno=RET.OK, errmsg="发送成功")
-    else:
-        return jsonify(error=RET.THIRDERR, errmsg="发送失败")
-
-    if result == 0:
-        # 发送成功
-        return jsonify(errno=RET.OK, errmsg="发送成功")
-    else:
-        return jsonify(errno=RET.THIRDERR, errmsg="发送失败")
+    # if result == 0:
+    #     # 发送成功
+    #     return jsonify(errno=RET.OK, errmsg="发送成功")
+    # else:
+    #     return jsonify(error=RET.THIRDERR, errmsg="发送失败")
+    #
+    # if result == 0:
+    #     # 发送成功
+    #     return jsonify(errno=RET.OK, errmsg="发送成功")
+    # else:
+    #     return jsonify(errno=RET.THIRDERR, errmsg="发送失败")
     #
     # 业务逻辑处理
     # 1.从redis 数据中取数据
