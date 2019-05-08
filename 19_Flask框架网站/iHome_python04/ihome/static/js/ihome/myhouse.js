@@ -14,9 +14,10 @@ $(document).ready(function() {
       $.get("/api/v1.0/user/houses", function(resp) {
         if ("0" == resp.errno) {
           var tempt = resp.data.houses;
-          $("#houses-list").html(template("houses-list-tmpl", {
+          var htmtempt = template("houses-list-tmpl", {
             houses: resp.data.houses
-          }));
+          })
+          $("#houses-list").html(htmtempt);
         } else {
           $("#houses-list").html(template("houses-list-tmpl", {
             houses: []
